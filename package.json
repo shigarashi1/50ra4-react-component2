@@ -2,6 +2,12 @@
   "name": "50ra4-react-component2",
   "version": "0.1.0",
   "private": true,
+  "main": "dist/es6/index.js",
+  "module": "dist/es6/index.js",
+  "typings": "dist/es6/index.d.ts",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "prepare": "npm run build",
     "start": "react-scripts start",
