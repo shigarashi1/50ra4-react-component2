@@ -10,14 +10,16 @@
   ],
   "scripts": {
     "prepare": "npm run build",
-    "start": "react-scripts start",
+    "start": "npm run storybook",
     "test": "react-scripts test",
     "test-ci": "cross-env CI=true react-scripts test",
     "clean": "rimraf ./dist",
     "build-check": "tsc --noEmit",
     "build-es6": "tsc -p ./tsconfig.build-es6.json",
     "build": "npm run clean && npm run build-es6",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "storybook": "start-storybook -p 6006 -s public",
+    "build-storybook": "rimraf ./docs && build-storybook -s public -o docs --no-dll"
   },
   "husky": {
     "hooks": {
@@ -51,6 +53,16 @@
     "styled-components": "5.2.1"
   },
   "devDependencies": {
+    "@storybook/addon-a11y": "6.1.11",
+    "@storybook/addon-actions": "6.1.11",
+    "@storybook/addon-docs": "6.1.11",
+    "@storybook/addon-essentials": "6.1.11",
+    "@storybook/addon-knobs": "6.1.11",
+    "@storybook/addon-links": "6.1.11",
+    "@storybook/addon-storyshots": "6.1.11",
+    "@storybook/node-logger": "6.1.11",
+    "@storybook/preset-create-react-app": "3.1.5",
+    "@storybook/react": "6.1.11",
     "@testing-library/jest-dom": "5.11.6",
     "@testing-library/react": "11.2.2",
     "@testing-library/user-event": "12.6.0",
