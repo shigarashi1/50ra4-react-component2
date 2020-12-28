@@ -11,6 +11,7 @@
     "prettier/@typescript-eslint",
     // `eslint-config-prettier` と `eslint-plugin-prettier` を有効化する
     // ※ extends 配列の一番最後に配置すること
+    "plugin:jsx-a11y/recommended",
     "plugin:prettier/recommended"
   ],
   "parser": "@typescript-eslint/parser",
