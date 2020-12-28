@@ -1,0 +1,15 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "outDir": "./dist",
+    "module": "es6",
+    "noEmit": false
+  },
+  "exclude": [
+    "./src/**/*.stories.*",
+    "./src/**/*.test.*",
+    // "./src/utils/**/*",
+    "./src/setupTests.ts",
+    "./src/mocks/*.ts",
+  ]
+}

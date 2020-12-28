@@ -2,12 +2,21 @@
   "name": "50ra4-react-component2",
   "version": "0.1.0",
   "private": true,
+  "main": "dist/es6/index.js",
+  "module": "dist/es6/index.js",
+  "typings": "dist/es6/index.d.ts",
+  "files": [
+    "dist"
+  ],
   "scripts": {
+    "prepare": "npm run build",
     "start": "react-scripts start",
-    "build": "react-scripts build",
     "test": "react-scripts test",
     "test-ci": "cross-env CI=true react-scripts test",
+    "clean": "rimraf ./dist",
     "build-check": "tsc --noEmit",
+    "build-es6": "tsc -p ./tsconfig.build-es6.json",
+    "build": "npm run clean && npm run build-es6",
     "eject": "react-scripts eject"
   },
   "husky": {
@@ -60,6 +69,7 @@
     "lint-staged": "10.5.3",
     "prettier": "2.2.1",
     "react-scripts": "4.0.1",
+    "rimraf": "3.0.2",
     "typescript": "4.1.3"
   }
 }
