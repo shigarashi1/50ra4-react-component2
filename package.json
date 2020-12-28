@@ -6,7 +6,20 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "test-ci": "cross-env CI=true react-scripts test",
+    "build-check": "tsc --noEmit",
     "eject": "react-scripts eject"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run build-check && npm run test-ci && lint-staged"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.{ts,tsx}": [
+      "eslint --fix --cache",
+      "git add"
+    ]
   },
   "browserslist": {
     "production": [
@@ -39,6 +52,7 @@
     "@types/styled-components": "5.1.7",
     "@typescript-eslint/eslint-plugin": "4.11.0",
     "@typescript-eslint/parser": "4.11.0",
+    "cross-env": "7.0.3",
     "eslint": "7.16.0",
     "eslint-config-prettier": "7.1.0",
     "eslint-plugin-prettier": "3.3.0",
