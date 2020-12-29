@@ -6,11 +6,11 @@
     "noEmit": false
   },
   "exclude": [
+    "./src/__snapshots__/*",
+    "./src/storybookUtils.tsx",
     "./src/**/*.stories.*",
     "./src/**/*.test.*",
-    // "./src/utils/**/*",
     "./src/setupTests.ts",
-    "./src/mocks/*.ts",
-    "./src/storybookUtils.tsx"
+    "./src/mocks/*.ts"
   ]
 }
