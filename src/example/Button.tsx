@@ -1,15 +1,10 @@
 import React from 'react';
-import './button.css';
-
+import styled from 'styled-components';
 export interface ButtonProps {
   /**
    * Is this the principal call to action on the page?
    */
   primary?: boolean;
-  /**
-   * What background color to use
-   */
-  backgroundColor?: string;
   /**
    * How large should the button be?
    */
@@ -27,22 +22,24 @@ export interface ButtonProps {
 /**
  * Primary UI component for user interaction
  */
-export const Button: React.FC<ButtonProps> = ({
-  primary = false,
-  size = 'medium',
-  backgroundColor,
-  label,
-  ...props
-}) => {
-  const mode = primary ? 'storybook-button--primary' : 'storybook-button--secondary';
+export const Button: React.FC<ButtonProps> = ({ primary = false, size = 'medium', label, onClick }) => {
   return (
-    <button
-      type="button"
-      className={['storybook-button', `storybook-button--${size}`, mode].join(' ')}
-      style={{ backgroundColor }}
-      {...props}
-    >
+    <StyledButton type="button" primary={primary} onClick={onClick}>
       {label}
-    </button>
+    </StyledButton>
   );
 };
+
+const StyledButton = styled.button<{ primary: boolean }>`
+  font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  border: 0;
+  border-radius: 5px;
+  cursor: pointer;
+  display: inline-block;
+  line-height: 1;
+  font-size: 14px;
+  padding: 11px 20px;
+  background-color: ${({ primary, theme }) => (primary ? theme.color.button.primary : theme.color.button.secondary)};
+  color: ${({ primary, theme }) => (primary ? theme.color.font.primary : theme.color.font.secondary)};
+`;
