@@ -1,0 +1,47 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Button Primary 1`] = `
+.c0 {
+  font-family: 'Nunito Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
+  font-weight: 700;
+  border: 0;
+  border-radius: 5px;
+  cursor: pointer;
+  display: inline-block;
+  line-height: 1;
+  font-size: 14px;
+  padding: 11px 20px;
+  background-color: #263228;
+  color: #ffffff;
+}
+
+<button
+  className="c0"
+  type="button"
+>
+  Button
+</button>
+`;
+
+exports[`Storyshots Button Secondary 1`] = `
+.c0 {
+  font-family: 'Nunito Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
+  font-weight: 700;
+  border: 0;
+  border-radius: 5px;
+  cursor: pointer;
+  display: inline-block;
+  line-height: 1;
+  font-size: 14px;
+  padding: 11px 20px;
+  background-color: #2e7c31;
+  color: #ffffff;
+}
+
+<button
+  className="c0"
+  type="button"
+>
+  Button
+</button>
+`;
