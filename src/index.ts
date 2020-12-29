@@ -1,2 +1,2 @@
-export * from './styles/theme';
+export * from './styles';
 export * from './providers';

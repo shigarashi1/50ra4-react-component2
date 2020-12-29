@@ -1,9 +1,9 @@
-import { createStoryMeta, createStoryTemplate } from '../storybookUtils';
+import { createStoryMeta, createStoryTemplate } from '../../storybookUtils';
 
 import { Button } from './Button';
 
 export default createStoryMeta(Button, {
-  title: 'Example/Button',
+  title: 'Button',
   argTypes: {
     backgroundColor: { control: 'color' },
   },

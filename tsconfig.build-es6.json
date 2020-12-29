@@ -11,5 +11,6 @@
     // "./src/utils/**/*",
     "./src/setupTests.ts",
     "./src/mocks/*.ts",
+    "./src/storybookUtils.tsx"
   ]
 }
