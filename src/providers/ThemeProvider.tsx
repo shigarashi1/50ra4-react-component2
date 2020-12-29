@@ -1,0 +1,18 @@
+import React from 'react';
+import { ThemeProvider as StyledComponentThemeProvider } from 'styled-components';
+
+import { GlobalStyle } from '../styles/reset';
+import { StyledTheme, lightTheme } from '../styles/theme';
+
+type Props = {
+  theme?: StyledTheme;
+};
+
+export const ThemeProvider: React.FC<Props> = ({ theme = lightTheme, children = null }) => {
+  return (
+    <StyledComponentThemeProvider theme={theme}>
+      <GlobalStyle theme={theme} />
+      {children}
+    </StyledComponentThemeProvider>
+  );
+};
