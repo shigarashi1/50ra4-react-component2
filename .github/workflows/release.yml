@@ -42,14 +42,6 @@ jobs:
     # チェックアウト
     - uses: actions/checkout@v1
     
-    # add git tag
-    - name: add tag
-      run: |
-        git fetch
-        git checkout -b main origin/main
-        git tag $TAG_NAME
-        git push origin $TAG_NAME
-    
     # ブランチ名変更
     - name: rename branch
       run: |
@@ -74,5 +66,5 @@ jobs:
     - name: force push deployment/production
       run: |
         git add ./docs
-        git commit -m 'release: $DATE'
+        git commit -m 'update: storybook'
         git push -f origin deployment/production
