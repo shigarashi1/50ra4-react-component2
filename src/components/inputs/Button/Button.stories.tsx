@@ -1,4 +1,4 @@
-import { createStoryMeta, createStoryTemplate } from '../../storybookUtils';
+import { createStoryMeta, createStoryTemplate } from '../../../storybookUtils';
 
 import { Button } from './Button';
 
