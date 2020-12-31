@@ -1,6 +1,8 @@
 const colorPalette = {
   default: {
-    main: '#708090',
+    main: '#a9a9a9',
+    light: '#d3d3d3',
+    dark: '#808080',
   },
   // https://material.io/resources/color/#!/?view.left=0&view.right=0&primary.color=263238&secondary.color=2E7D32
   primary: {
@@ -15,21 +17,33 @@ const colorPalette = {
   },
   positive: {
     main: '#3cb371',
+    light: '#8fbc8f',
+    dark: '#228b22',
   },
   negative: {
-    main: '#708090',
+    main: '#778899',
+    light: '#b0c4de',
+    dark: '#708090',
   },
   success: {
     main: '#3cb371',
+    light: '#8fbc8f',
+    dark: '#228b22',
   },
   error: {
-    main: '#dc143c',
+    main: '#ff4500',
+    light: '#ff7f50',
+    dark: '#dc143c',
   },
   warning: {
     main: '#ffa500',
+    light: '#ffd700',
+    dark: '#ff8c00',
   },
   info: {
     main: '#1e90ff',
+    light: '#87cefa',
+    dark: '#4682b4',
   },
 };
 
@@ -44,6 +58,15 @@ const fontColor = {
 };
 export type FontColor = keyof typeof fontColor;
 
+const fontSize = {
+  extraSmall: 12,
+  small: 14,
+  middle: 16,
+  large: 18,
+  extraLarge: 22,
+};
+export type FontSize = keyof typeof fontSize;
+
 const buttonColor = {
   default: colorPalette.default.main,
   primary: colorPalette.primary.main,
@@ -57,12 +80,22 @@ const buttonColor = {
 };
 export type ButtonColor = keyof typeof buttonColor;
 
+const padding = {
+  small: '4px 8px',
+  middle: '6px 12px',
+  large: '8px 16px',
+};
+
 export const lightTheme = {
   color: {
     palette: colorPalette,
     font: fontColor,
     button: buttonColor,
   },
+  size: {
+    font: fontSize,
+  },
+  padding,
 };
 export type StyledTheme = typeof lightTheme;
 export const darkTheme: StyledTheme = {
