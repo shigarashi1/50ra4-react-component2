@@ -1,49 +1,54 @@
 const colorPalette = {
   default: {
-    main: '#a9a9a9',
     light: '#d3d3d3',
+    main: '#a9a9a9',
     dark: '#808080',
   },
   // https://material.io/resources/color/#!/?view.left=0&view.right=0&primary.color=263238&secondary.color=2E7D32
   primary: {
-    main: '#263228',
     light: '#4f5b62',
+    main: '#263228',
     dark: '#000a12',
   },
   secondary: {
-    main: '#2e7c31',
     light: '#60ac5d',
+    main: '#2e7c31',
     dark: '#004f04',
   },
   positive: {
-    main: '#3cb371',
-    light: '#8fbc8f',
-    dark: '#228b22',
+    light: '#60ac5d',
+    main: '#2e7c31',
+    dark: '#004f04',
   },
   negative: {
-    main: '#778899',
-    light: '#b0c4de',
-    dark: '#708090',
+    light: '#d3d3d3',
+    main: '#a9a9a9',
+    dark: '#808080',
   },
   success: {
-    main: '#3cb371',
-    light: '#8fbc8f',
-    dark: '#228b22',
+    light: '#60ac5d',
+    main: '#2e7c31',
+    dark: '#004f04',
   },
   error: {
-    main: '#ff4500',
-    light: '#ff7f50',
+    light: '#ffa07a',
+    main: '#ff6347',
     dark: '#dc143c',
   },
   warning: {
-    main: '#ffa500',
-    light: '#ffd700',
-    dark: '#ff8c00',
+    light: '#f0e68c',
+    main: '#ffd700',
+    dark: '#ffa500',
   },
   info: {
-    main: '#1e90ff',
     light: '#87cefa',
+    main: '#1e90ff',
     dark: '#4682b4',
+  },
+  purple: {
+    light: '#d05ce3',
+    main: '#9c27b0',
+    dark: '#6a0080',
   },
 };
 
