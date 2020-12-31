@@ -19,6 +19,11 @@ jobs:
   build:
     # 実行するインスタンス
     runs-on: ubuntu-latest
+    
+    #
+    env: 
+     REPO: https://${{github.actor}}:${{secrets.GITHUB_TOKEN}}@github.com/${{github.repository}}.git
+     BRANCH_NAME: deployment/production
 
     # nodeのバージョン一覧
     strategy:
@@ -33,8 +38,7 @@ jobs:
       run: |
         DATE=`date "+%Y%m%d_%H%M"`
         TAG_NAME="release_$DATE"
-        BRANCH_NAME="deployment/production"
-        echo "DATE=$DATE, TAG_NAME=$TAG_NAME, BRANCH_NAME=$BRANCH_NAME"
+        echo "REPO=$REPO, DATE=$DATE, TAG_NAME=$TAG_NAME, BRANCH_NAME=$BRANCH_NAME"
 
     # チェックアウト
     - uses: actions/checkout@v1
@@ -42,6 +46,7 @@ jobs:
     # ブランチ名変更
     - name: rename branch
       run: |
+        git branch
         git checkout -b $BRANCH_NAME
 
     # 使用するnodeのバージョンを指定
