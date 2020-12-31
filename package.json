@@ -19,7 +19,7 @@
     "build": "npm run clean && npm run build-es6",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 6006 -s public",
-    "build-storybook": "rimraf ./docs && build-storybook -s public -o docs --no-dll"
+    "build-storybook": "rimraf ./docs && build-storybook -s public -o docs"
   },
   "husky": {
     "hooks": {
