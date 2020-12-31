@@ -3,7 +3,7 @@
 ## components
 
 ### inputs
-- [ ] Button
+- [x] Button
 - [ ] TextInput
 - [ ] DateInput
 - [ ] SelectInput
