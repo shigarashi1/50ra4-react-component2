@@ -31,7 +31,6 @@ export const Button: React.FC<ButtonProps> = ({ primary = false, size = 'medium'
 };
 
 const StyledButton = styled.button<{ primary: boolean }>`
-  font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: 700;
   border: 0;
   border-radius: 5px;
@@ -41,5 +40,5 @@ const StyledButton = styled.button<{ primary: boolean }>`
   font-size: 14px;
   padding: 11px 20px;
   background-color: ${({ primary, theme }) => (primary ? theme.color.button.primary : theme.color.button.secondary)};
-  color: ${({ primary, theme }) => (primary ? theme.color.font.primary : theme.color.font.secondary)};
+  color: ${({ primary, theme }) => (primary ? theme.font.color.primary : theme.font.color.secondary)};
 `;
