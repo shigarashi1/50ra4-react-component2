@@ -6,7 +6,7 @@ import { ThemeProvider } from '../../../providers';
 test('renders learn react link', () => {
   render(
     <ThemeProvider>
-      <Button label="learn react" />
+      <Button>learn react</Button>
     </ThemeProvider>,
   );
   const linkElement = screen.getByText(/learn react/i);
