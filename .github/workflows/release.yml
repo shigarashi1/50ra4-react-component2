@@ -45,6 +45,8 @@ jobs:
     # add git tag
     - name: add tag
       run: |
+        git fetch
+        git checkout -b main origin/main
         git tag $TAG_NAME
         git push origin $TAG_NAME
     
