@@ -52,6 +52,9 @@ const colorPalette = {
   },
 };
 
+type Size = 'small' | 'medium' | 'large';
+type Variant = 'contained' | 'outlined' | 'text';
+
 const fontColor = {
   default: '#ffffff',
   primary: '#ffffff',
@@ -66,7 +69,7 @@ export type FontColor = keyof typeof fontColor;
 const fontSize = {
   extraSmall: 12,
   small: 14,
-  middle: 16,
+  medium: 16,
   large: 18,
   extraLarge: 22,
 };
@@ -92,6 +95,8 @@ const buttonColor = {
   purple: colorPalette.purple.main,
 };
 export type ButtonColor = keyof typeof buttonColor;
+export type ButtonSize = Size;
+export type ButtonVariant = Variant;
 
 const borderColor = {
   default: colorPalette.default.dark,
@@ -108,9 +113,9 @@ const borderColor = {
 export type BorderColor = keyof typeof borderColor;
 
 const padding = {
-  small: '4px 8px',
-  middle: '6px 12px',
-  large: '8px 16px',
+  small: '8px 16px',
+  medium: '12px 24px',
+  large: '15px 32px',
 };
 
 export const lightTheme = {
