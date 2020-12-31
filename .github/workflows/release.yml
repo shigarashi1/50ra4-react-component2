@@ -20,7 +20,7 @@ jobs:
     # 実行するインスタンス
     runs-on: ubuntu-latest
     
-    #
+    # 環境変数設定
     env: 
      REPO: https://${{github.actor}}:${{secrets.GITHUB_TOKEN}}@github.com/${{github.repository}}.git
      BRANCH_NAME: deployment/production
@@ -33,15 +33,20 @@ jobs:
     # 各ステップの実行
     steps:
     
-    # 環境変数設定
+    # タグ名設定
     - name: set env
       run: |
         DATE=`date "+%Y%m%d_%H%M"`
         TAG_NAME="release_$DATE"
-        echo "REPO=$REPO, DATE=$DATE, TAG_NAME=$TAG_NAME, BRANCH_NAME=$BRANCH_NAME"
 
     # チェックアウト
     - uses: actions/checkout@v1
+    
+    # add git tag
+    - name: add tag
+      run: |
+        git tag $TAG_NAME
+        git push origin $TAG_NAME
     
     # ブランチ名変更
     - name: rename branch
@@ -62,12 +67,6 @@ jobs:
         npm run build-storybook
       env:
         CI: true
-  
-    # add git tag
-    - name: add tag
-      run: |
-        git tag $TAG_NAME
-        git push origin $TAG_NAME
     
     # force push
     - name: force push deployment/production
