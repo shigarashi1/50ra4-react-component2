@@ -1,14 +1,14 @@
 const colorPalette = {
   default: {
-    light: '#d3d3d3',
+    light: '#dbdbdb',
     main: '#a9a9a9',
-    dark: '#808080',
+    dark: '#7a7a7a',
   },
-  // https://material.io/resources/color/#!/?view.left=0&view.right=0&primary.color=263238&secondary.color=2E7D32
+  // https://material.io/resources/color/#!/?view.left=0&view.right=0
   primary: {
-    light: '#4f5b62',
+    light: '#4e5b50',
     main: '#263228',
-    dark: '#000a12',
+    dark: '#000b00',
   },
   secondary: {
     light: '#60ac5d',
@@ -21,9 +21,9 @@ const colorPalette = {
     dark: '#004f04',
   },
   negative: {
-    light: '#d3d3d3',
+    light: '#dbdbdb',
     main: '#a9a9a9',
-    dark: '#808080',
+    dark: '#7a7a7a',
   },
   success: {
     light: '#60ac5d',
@@ -31,19 +31,19 @@ const colorPalette = {
     dark: '#004f04',
   },
   error: {
-    light: '#ffa07a',
+    light: '#ff9574',
     main: '#ff6347',
-    dark: '#dc143c',
+    dark: '#c52e1d',
   },
   warning: {
-    light: '#f0e68c',
+    light: '#ffff52',
     main: '#ffd700',
-    dark: '#ffa500',
+    dark: '#c7a600',
   },
   info: {
-    light: '#87cefa',
+    light: '#6fc0ff',
     main: '#1e90ff',
-    dark: '#4682b4',
+    dark: '#0063cb',
   },
   purple: {
     light: '#d05ce3',
