@@ -60,5 +60,5 @@ const StyledColor = styled.div<{ color: string }>`
 const StyledColorText = styled.div<{ isBlack: boolean }>`
   display: block;
   width: 100%;
-  color: ${({ isBlack, theme }) => (isBlack ? theme.color.font.black : theme.color.font.white)};
+  color: ${({ isBlack, theme }) => (isBlack ? theme.font.color.black : theme.font.color.white)};
 `;

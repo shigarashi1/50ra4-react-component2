@@ -1,10 +1,10 @@
+// https://material.io/resources/color/#!/?view.left=0&view.right=0
 const colorPalette = {
   default: {
     light: '#dbdbdb',
     main: '#a9a9a9',
     dark: '#7a7a7a',
   },
-  // https://material.io/resources/color/#!/?view.left=0&view.right=0
   primary: {
     light: '#4e5b50',
     main: '#263228',
@@ -72,6 +72,8 @@ const fontSize = {
 };
 export type FontSize = keyof typeof fontSize;
 
+const fontFamily = '"Helvetica Neue",Arial,"Hiragino Kaku Gothic ProN","Hiragino Sans",Meiryo,sans-serif';
+
 const buttonColor = {
   default: colorPalette.default.main,
   primary: colorPalette.primary.main,
@@ -82,6 +84,7 @@ const buttonColor = {
   error: colorPalette.error.main,
   warning: colorPalette.warning.main,
   info: colorPalette.info.main,
+  purple: colorPalette.purple.main,
 };
 export type ButtonColor = keyof typeof buttonColor;
 
@@ -94,11 +97,12 @@ const padding = {
 export const lightTheme = {
   color: {
     palette: colorPalette,
-    font: fontColor,
     button: buttonColor,
   },
-  size: {
-    font: fontSize,
+  font: {
+    color: fontColor,
+    family: fontFamily,
+    size: fontSize,
   },
   padding,
 };
