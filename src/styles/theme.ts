@@ -74,6 +74,11 @@ export type FontSize = keyof typeof fontSize;
 
 const fontFamily = '"Helvetica Neue",Arial,"Hiragino Kaku Gothic ProN","Hiragino Sans",Meiryo,sans-serif';
 
+const fontWeight = {
+  bold: 700,
+  normal: 400,
+};
+
 const buttonColor = {
   default: colorPalette.default.main,
   primary: colorPalette.primary.main,
@@ -88,6 +93,20 @@ const buttonColor = {
 };
 export type ButtonColor = keyof typeof buttonColor;
 
+const borderColor = {
+  default: colorPalette.default.dark,
+  primary: colorPalette.primary.dark,
+  secondary: colorPalette.secondary.dark,
+  positive: colorPalette.positive.dark,
+  negative: colorPalette.negative.dark,
+  success: colorPalette.success.dark,
+  error: colorPalette.error.dark,
+  warning: colorPalette.warning.dark,
+  info: colorPalette.info.dark,
+  purple: colorPalette.purple.dark,
+};
+export type BorderColor = keyof typeof borderColor;
+
 const padding = {
   small: '4px 8px',
   middle: '6px 12px',
@@ -98,11 +117,13 @@ export const lightTheme = {
   color: {
     palette: colorPalette,
     button: buttonColor,
+    border: borderColor,
   },
   font: {
     color: fontColor,
     family: fontFamily,
     size: fontSize,
+    weight: fontWeight,
   },
   padding,
 };

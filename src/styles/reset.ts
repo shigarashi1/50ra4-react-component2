@@ -7,7 +7,7 @@ export const GlobalStyle = createGlobalStyle<{ theme: StyledTheme }>`
   ${reset}
   /* other styles */
   * {
-    font-size: ${({ theme }) => theme.font.size.middle};
+    font-size: ${({ theme }) => `${theme.font.size.middle}px`};
     font-family: ${({ theme }) => theme.font.family};
   }
 `;
