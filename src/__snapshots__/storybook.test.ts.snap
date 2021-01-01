@@ -12,10 +12,6 @@ exports[`Storyshots display/Chip Docs 1`] = `
 }
 
 .c1 {
-  display: inline-block;
-}
-
-.c2 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -40,11 +36,7 @@ exports[`Storyshots display/Chip Docs 1`] = `
   <div
     className="c1"
   >
-    <div
-      className="c2"
-    >
-      Sample
-    </div>
+    Sample
   </div>
 </div>
 `;
@@ -66,10 +58,6 @@ exports[`Storyshots display/Chip Large 1`] = `
 }
 
 .c1 {
-  display: inline-block;
-}
-
-.c2 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -94,11 +82,7 @@ exports[`Storyshots display/Chip Large 1`] = `
   <div
     className="c1"
   >
-    <div
-      className="c2"
-    >
-      Large
-    </div>
+    Large
   </div>
 </div>
 `;
@@ -115,10 +99,6 @@ exports[`Storyshots display/Chip Medium 1`] = `
 }
 
 .c1 {
-  display: inline-block;
-}
-
-.c2 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -143,11 +123,7 @@ exports[`Storyshots display/Chip Medium 1`] = `
   <div
     className="c1"
   >
-    <div
-      className="c2"
-    >
-      Medium
-    </div>
+    Medium
   </div>
 </div>
 `;
@@ -167,10 +143,6 @@ exports[`Storyshots display/Chip Outlined 1`] = `
 }
 
 .c1 {
-  display: inline-block;
-}
-
-.c2 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -195,11 +167,7 @@ exports[`Storyshots display/Chip Outlined 1`] = `
   <div
     className="c1"
   >
-    <div
-      className="c2"
-    >
-      Large
-    </div>
+    Large
   </div>
 </div>
 `;
@@ -216,10 +184,6 @@ exports[`Storyshots display/Chip Secondary 1`] = `
 }
 
 .c1 {
-  display: inline-block;
-}
-
-.c2 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -244,11 +208,7 @@ exports[`Storyshots display/Chip Secondary 1`] = `
   <div
     className="c1"
   >
-    <div
-      className="c2"
-    >
-      Secondary
-    </div>
+    Secondary
   </div>
 </div>
 `;
@@ -265,10 +225,6 @@ exports[`Storyshots display/Chip With Delete Icon 1`] = `
 }
 
 .c1 {
-  display: inline-block;
-}
-
-.c2 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -293,11 +249,7 @@ exports[`Storyshots display/Chip With Delete Icon 1`] = `
   <div
     className="c1"
   >
-    <div
-      className="c2"
-    >
-      With Delete Icon
-    </div>
+    With Delete Icon
   </div>
 </div>
 `;
