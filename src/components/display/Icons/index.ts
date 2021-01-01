@@ -5,7 +5,6 @@ export * from './ArrowLeftIcon';
 export * from './CancelIcon';
 export * from './CheckboxIcon';
 export * from './ChevronLeftIcon';
-export * from './ClearIcon';
 export * from './CloseIcon';
 export * from './DeleteIcon';
 export * from './ExpandMoreIcon';
