@@ -1,0 +1,58 @@
+# This workflow uses actions that are not certified by GitHub.
+# They are provided by a third-party and are governed by
+# separate terms of service, privacy policy, and support
+# documentation.
+
+# This workflow will install Deno and run tests across stable and nightly builds on Windows, Ubuntu and macOS.
+# For more information see: https://github.com/denolib/setup-deno
+
+# ワークフローの名前
+name: CI
+
+# 起動のタイミング
+on:
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  ci:
+    # set instance
+    runs-on: ubuntu-latest
+    
+    # set .env
+    env: 
+     REPO: https://${{github.actor}}:${{secrets.GITHUB_TOKEN}}@github.com/${{github.repository}}.git
+
+    # node version
+    strategy:
+      matrix:
+        node-version: ['12.18']
+
+    # 各ステップの実行
+    steps:
+
+    # checkout git repository
+    - uses: actions/checkout@v1
+
+    # setup node
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v1
+      with:
+        node-version: ${{ matrix.node-version }}
+  
+    # install npm packages
+    - name: install npm packages
+      run: |
+        npm install
+
+    # build
+    - name: check build
+      run: |
+        npm run build-check
+        
+    # test
+    - name: check test
+      run: |
+        npm run test
+      env:
+        CI: true

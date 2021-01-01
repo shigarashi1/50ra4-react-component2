@@ -1,5 +1,307 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Storyshots display/Chip Docs 1`] = `
+.c0 {
+  display: inline-block;
+  border-radius: 100px;
+  cursor: default;
+  background-color: #263228;
+  padding: 8px 16px;
+  color: #ffffff;
+  font-size: 14px;
+}
+
+.c1 {
+  display: inline-block;
+}
+
+.c2 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+<div
+  className="c0"
+  color="primary"
+  disabled={false}
+  onClick={[Function]}
+  size="small"
+>
+  <div
+    className="c1"
+  >
+    <div
+      className="c2"
+    >
+      Sample
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots display/Chip Large 1`] = `
+.c0 {
+  display: inline-block;
+  border-radius: 100px;
+  cursor: default;
+  background-color: #ff6347;
+  padding: 15px 32px;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 700;
+  -webkit-letter-spacing: 0.1em;
+  -moz-letter-spacing: 0.1em;
+  -ms-letter-spacing: 0.1em;
+  letter-spacing: 0.1em;
+}
+
+.c1 {
+  display: inline-block;
+}
+
+.c2 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+<div
+  className="c0"
+  color="error"
+  disabled={false}
+  onClick={[Function]}
+  size="large"
+>
+  <div
+    className="c1"
+  >
+    <div
+      className="c2"
+    >
+      Large
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots display/Chip Medium 1`] = `
+.c0 {
+  display: inline-block;
+  border-radius: 100px;
+  cursor: default;
+  background-color: #a9a9a9;
+  padding: 12px 24px;
+  color: #ffffff;
+  font-size: 16px;
+}
+
+.c1 {
+  display: inline-block;
+}
+
+.c2 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+<div
+  className="c0"
+  color="default"
+  disabled={false}
+  onClick={[Function]}
+  size="medium"
+>
+  <div
+    className="c1"
+  >
+    <div
+      className="c2"
+    >
+      Medium
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots display/Chip Outlined 1`] = `
+.c0 {
+  display: inline-block;
+  border: 1px;
+  border-color: #9c27b0;
+  border-style: solid;
+  border-radius: 100px;
+  cursor: default;
+  background-color: inherit;
+  padding: 8px 16px;
+  color: #9c27b0;
+  font-size: 14px;
+}
+
+.c1 {
+  display: inline-block;
+}
+
+.c2 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+<div
+  className="c0"
+  color="purple"
+  disabled={false}
+  onClick={[Function]}
+  size="small"
+>
+  <div
+    className="c1"
+  >
+    <div
+      className="c2"
+    >
+      Large
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots display/Chip Secondary 1`] = `
+.c0 {
+  display: inline-block;
+  border-radius: 100px;
+  cursor: default;
+  background-color: #2e7c31;
+  padding: 8px 16px;
+  color: #ffffff;
+  font-size: 14px;
+}
+
+.c1 {
+  display: inline-block;
+}
+
+.c2 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+<div
+  className="c0"
+  color="secondary"
+  disabled={false}
+  onClick={[Function]}
+  size="small"
+>
+  <div
+    className="c1"
+  >
+    <div
+      className="c2"
+    >
+      Secondary
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots display/Chip With Delete Icon 1`] = `
+.c0 {
+  display: inline-block;
+  border-radius: 100px;
+  cursor: default;
+  background-color: #1e90ff;
+  padding: 8px 16px;
+  color: #ffffff;
+  font-size: 14px;
+}
+
+.c1 {
+  display: inline-block;
+}
+
+.c2 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+<div
+  className="c0"
+  color="info"
+  disabled={false}
+  onClick={[Function]}
+  size="small"
+>
+  <div
+    className="c1"
+  >
+    <div
+      className="c2"
+    >
+      With Delete Icon
+    </div>
+  </div>
+</div>
+`;
+
 exports[`Storyshots inputs/Button Disabled 1`] = `
 .c0 {
   font-weight: 700;
