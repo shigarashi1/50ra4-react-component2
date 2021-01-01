@@ -1,5 +1,7 @@
 # 50ra4-react-component2
 
+Storybook [Check github pages](https://shigarashi1.github.io/50ra4-react-component2/)
+
 ## components
 
 ### inputs
