@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { ChipSize, ChipColor, ChipVariant } from '../../../styles';
+import { CancelIcon } from '../Icons';
 
 type Props = {
   className?: string;
@@ -48,10 +49,14 @@ export const Chip: React.FC<Props> = ({
       isClickable={isClickable}
       onClick={onClickHandler}
     >
-      <StyledContentWrapper>
-        <StyledContent>{children}</StyledContent>
-        {onDelete && <StyledDeleteIcon onClick={onDeleteHandler}>X</StyledDeleteIcon>}
-      </StyledContentWrapper>
+      <StyledContent>
+        {children}
+        {onDelete && (
+          <StyledCancelIconWrapper color={color} variant={variant} size={size} onClick={onDeleteHandler}>
+            <StyledCancelIcon size={size} />
+          </StyledCancelIconWrapper>
+        )}
+      </StyledContent>
     </StyledRoot>
   );
 };
@@ -78,17 +83,21 @@ const StyledRoot = styled.div<StyledRootProps>`
     opacity: ${({ isClickable }) => isClickable && 0.5};
   }
 `;
-const StyledContentWrapper = styled.div`
-  display: inline-block;
-`;
 const StyledContent = styled.div`
   display: inline-flex;
   justify-content: center;
   align-items: center;
 `;
-// TODO: replace Icons
-const StyledDeleteIcon = styled.span`
-  color: ${({ theme }) => theme.font.color.lightGray};
-  font-size: ${({ theme }) => theme.font.size.medium};
-  padding-left: 10px;
+
+const StyledCancelIcon = styled(CancelIcon)``;
+
+type StyledCancelIconWrapperProps = Pick<Required<Props>, 'variant' | 'color' | 'size'>;
+const StyledCancelIconWrapper = styled.div<StyledCancelIconWrapperProps>`
+  display: inline-flex;
+  padding-left: 5px;
+  padding-bottom: ${({ size }) => size === 'small' && '2px'};
+  & > ${StyledCancelIcon} {
+    fill: ${({ theme, variant, color }) =>
+      variant === 'outlined' ? theme.color.palette[color].main : theme.font.color.white};
+  }
 `;
