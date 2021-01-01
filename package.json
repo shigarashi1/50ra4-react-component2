@@ -12,7 +12,6 @@
     "prepare": "npm run build",
     "start": "npm run storybook",
     "test": "react-scripts test",
-    "test-ci": "cross-env CI=true react-scripts test",
     "clean": "rimraf ./dist",
     "build-check": "tsc --noEmit",
     "build-es6": "tsc -p ./tsconfig.build-es6.json",
@@ -23,7 +22,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run build-check && npm run test-ci && lint-staged"
+      "pre-commit": "npm run build-check && lint-staged"
     }
   },
   "lint-staged": {
@@ -74,7 +73,6 @@
     "@types/styled-components": "5.1.7",
     "@typescript-eslint/eslint-plugin": "4.11.0",
     "@typescript-eslint/parser": "4.11.0",
-    "cross-env": "7.0.3",
     "eslint": "7.16.0",
     "eslint-config-prettier": "7.1.0",
     "eslint-plugin-jsx-a11y": "6.4.1",
