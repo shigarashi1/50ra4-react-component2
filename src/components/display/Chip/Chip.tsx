@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { ChipSize, ChipColor, ChipVariant } from '../../../styles';
 
 type Props = {
+  className?: string;
   color?: ChipColor;
   size?: ChipSize;
   variant?: ChipVariant;
@@ -12,6 +13,7 @@ type Props = {
 };
 
 export const Chip: React.FC<Props> = ({
+  className,
   color = 'default',
   size = 'small',
   variant = 'default',
@@ -38,6 +40,7 @@ export const Chip: React.FC<Props> = ({
 
   return (
     <StyledRoot
+      className={className}
       color={color}
       size={size}
       variant={variant}
@@ -53,7 +56,7 @@ export const Chip: React.FC<Props> = ({
   );
 };
 
-type StyledRootProps = Omit<Required<Props>, 'onClick' | 'onDelete'> & { isClickable: boolean };
+type StyledRootProps = Omit<Required<Props>, 'className' | 'onClick' | 'onDelete'> & { isClickable: boolean };
 const StyledRoot = styled.div<StyledRootProps>`
   display: inline-block;
   border: ${({ variant }) => variant === 'outlined' && '1px'};
