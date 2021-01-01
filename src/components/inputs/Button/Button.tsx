@@ -45,7 +45,7 @@ type StyledProps = Omit<Required<Props>, 'onClick'>;
 const StyledButton = styled.button<StyledProps>`
   font-weight: 700;
   border: ${({ variant }) => (variant === 'outlined' ? '1px' : 0)};
-  border-color: ${({ theme, variant, color }) => variant === 'outlined' && theme.color.button[color]};
+  border-color: ${({ theme, variant, color }) => variant === 'outlined' && theme.color.palette[color].main};
   border-style: ${({ variant }) => variant === 'outlined' && 'solid'};
   border-radius: 3px;
   cursor: ${({ disabled }) => (disabled ? 'default' : 'pointer')};
@@ -54,9 +54,10 @@ const StyledButton = styled.button<StyledProps>`
   line-height: 1;
   font-size: ${({ theme, size }) => `${theme.font.size[size]}px`};
   padding: ${({ theme, size }) => theme.padding[size]};
-  background-color: ${({ theme, variant, color }) => (variant !== 'contained' ? 'inherit' : theme.color.button[color])};
+  background-color: ${({ theme, variant, color }) =>
+    variant !== 'contained' ? 'inherit' : theme.color.palette[color].main};
   color: ${({ theme, variant, color }) =>
-    variant !== 'contained' ? theme.color.button[color] : theme.font.color.white};
+    variant !== 'contained' ? theme.color.palette[color].main : theme.font.color.white};
   width: ${({ fullWidth }) => fullWidth && '100%'};
   &:hover {
     opacity: 0.5;

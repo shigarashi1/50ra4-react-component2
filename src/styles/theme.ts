@@ -88,20 +88,7 @@ const fontLetterSpacing = {
   wider: '0.1em',
 };
 
-// TODO: remove it
-const buttonColor = {
-  default: colorPalette.default.main,
-  primary: colorPalette.primary.main,
-  secondary: colorPalette.secondary.main,
-  positive: colorPalette.positive.main,
-  negative: colorPalette.negative.main,
-  success: colorPalette.success.main,
-  error: colorPalette.error.main,
-  warning: colorPalette.warning.main,
-  info: colorPalette.info.main,
-  purple: colorPalette.purple.main,
-};
-export type ButtonColor = keyof typeof buttonColor;
+export type ButtonColor = PaletteColor;
 export type ButtonSize = Size;
 export type ButtonVariant = Variant;
 
@@ -132,7 +119,6 @@ const padding = {
 export const lightTheme = {
   color: {
     palette: colorPalette,
-    button: buttonColor,
     border: borderColor,
   },
   font: {
