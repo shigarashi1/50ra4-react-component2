@@ -16,14 +16,13 @@ on:
       - main
 
 jobs:
-  build:
+  deploy-storybook:
     # 実行するインスタンス
     runs-on: ubuntu-latest
     
     # 環境変数設定
     env: 
      REPO: https://${{github.actor}}:${{secrets.GITHUB_TOKEN}}@github.com/${{github.repository}}.git
-     BRANCH_NAME: deployment/production
 
     # nodeのバージョン一覧
     strategy:
@@ -32,21 +31,9 @@ jobs:
 
     # 各ステップの実行
     steps:
-    
-    # タグ名設定
-    - name: set env
-      run: |
-        DATE=`date "+%Y%m%d_%H%M"`
-        TAG_NAME="release_$DATE"
 
     # チェックアウト
     - uses: actions/checkout@v1
-    
-    # ブランチ名変更
-    - name: rename branch
-      run: |
-        git branch
-        git checkout -b $BRANCH_NAME
 
     # 使用するnodeのバージョンを指定
     - name: Use Node.js ${{ matrix.node-version }}
@@ -62,9 +49,9 @@ jobs:
       env:
         CI: true
     
-    # force push
-    - name: force push deployment/production
-      run: |
-        git add ./docs
-        git commit -m 'update: storybook'
-        git push -f origin deployment/production
+    # deploy
+    - name: deploy
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./docs
