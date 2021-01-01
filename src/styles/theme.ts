@@ -52,6 +52,7 @@ const colorPalette = {
   },
 };
 
+export type PaletteColor = keyof typeof colorPalette;
 type Size = 'small' | 'medium' | 'large';
 type Variant = 'contained' | 'outlined' | 'text';
 
@@ -81,7 +82,13 @@ const fontWeight = {
   bold: 700,
   normal: 400,
 };
+const fontLetterSpacing = {
+  default: '0.05em',
+  narrower: '0.03em',
+  wider: '0.1em',
+};
 
+// TODO: remove it
 const buttonColor = {
   default: colorPalette.default.main,
   primary: colorPalette.primary.main,
@@ -97,6 +104,10 @@ const buttonColor = {
 export type ButtonColor = keyof typeof buttonColor;
 export type ButtonSize = Size;
 export type ButtonVariant = Variant;
+
+export type ChipColor = PaletteColor;
+export type ChipSize = Size;
+export type ChipVariant = 'default' | 'outlined';
 
 const borderColor = {
   default: colorPalette.default.dark,
@@ -129,6 +140,7 @@ export const lightTheme = {
     family: fontFamily,
     size: fontSize,
     weight: fontWeight,
+    letterSpacing: fontLetterSpacing,
   },
   padding,
 };
