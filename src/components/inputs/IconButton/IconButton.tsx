@@ -23,6 +23,7 @@ export const IconButton = styled(IconButtonBase)`
   display: inline-flex;
   justify-content: center;
   align-items: center;
+  background-color: inherit;
   padding: 2px;
   border: none;
   cursor: ${({ disabled }) => (disabled ? 'default' : 'pointer')};
