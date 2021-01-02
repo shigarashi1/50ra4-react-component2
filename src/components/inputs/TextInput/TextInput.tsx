@@ -110,11 +110,10 @@ const StyledRoot = styled.div<StyledRootProps>`
   background-color: #ffffff;
   opacity: ${({ disabled }) => disabled && 0.5};
   border-width: 1px;
-  border-color: ${({ theme }) => theme.palette.default.main};
+  border-color: ${({ theme }) => theme.input.borderColor};
   border-style: solid;
   border-radius: 3px;
-  box-shadow: ${({ theme, focused, hasError }) =>
-    (focused || hasError) && `0 0 0 2px ${focused ? theme.palette.positive.light : theme.palette.error.light}`};
+  ${({ theme, focused, hasError }) => theme.input.focusBoxShadow(focused, hasError)};
   padding: 2px;
 `;
 type StyledInputProps = Pick<RequiredProps, 'disabled' | 'hasError'>;
