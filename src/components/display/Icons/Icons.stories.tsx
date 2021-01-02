@@ -30,13 +30,12 @@ Docs.args = {
   size: 'large',
 };
 
-const icons = [
+const ICON_LIST = [
   ['AddCircleIcon', AddCircleIcon],
   ['AddIcon', AddIcon],
   ['ArrowDropDownIcon', ArrowDropDownIcon],
   ['ArrowLeftIcon', ArrowLeftIcon],
   ['CancelIcon', CancelIcon],
-  ['ChevronLeftIcon', ChevronLeftIcon],
   ['CloseIcon', CloseIcon],
   ['DeleteIcon', DeleteIcon],
   ['InfoIcon', InfoIcon],
@@ -47,10 +46,10 @@ const icons = [
   ['WarningIcon', WarningIcon],
 ];
 
-export const Icons = () => {
+export const IconList = () => {
   return (
     <StyledRoot>
-      {icons.map(([name, Icon], index) => (
+      {ICON_LIST.map(([name, Icon], index) => (
         <StyledWrapper key={index}>
           <p>{name}</p>
           <StyledIconWrapper>
