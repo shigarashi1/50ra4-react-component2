@@ -96,6 +96,9 @@ export type ChipColor = PaletteColor;
 export type ChipSize = Size;
 export type ChipVariant = 'default' | 'outlined';
 
+export type CheckboxColor = PaletteColor;
+export type CheckboxSize = Size;
+
 const iconSize = {
   small: 18,
   medium: 24,
