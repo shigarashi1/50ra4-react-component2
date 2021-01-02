@@ -6,6 +6,9 @@ Storybook [Check github pages](https://shigarashi1.github.io/50ra4-react-compone
 - [ ] fix: font-size and icon-size
 - [x] move: style type definition to types
 - [x] fix: theme props
+- [ ] fix: color palette
+- [ ] fix: theme props
+- [ ] fix: organize css definition
 
 ## components
 
