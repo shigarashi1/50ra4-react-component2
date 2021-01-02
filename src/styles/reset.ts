@@ -12,6 +12,7 @@ export const GlobalStyle = createGlobalStyle<{ theme: StyledTheme }>`
     letter-spacing: ${({ theme }) => theme.font.letterSpacing.default};
   }
   body {
-    background-color: ${({ theme }) => theme.color.background};
+    color: ${({ theme }) => theme.body.color};
+    background-color: ${({ theme }) => theme.body.backgroundColor};
   }
 `;
