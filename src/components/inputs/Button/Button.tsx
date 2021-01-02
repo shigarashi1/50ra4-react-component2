@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { ButtonColor, ButtonSize, ButtonVariant } from '../../../styles';
 
 type Props = {
+  className?: string;
   color?: ButtonColor;
   size?: ButtonSize;
   variant?: ButtonVariant;
@@ -12,6 +13,7 @@ type Props = {
 };
 
 export const Button: React.FC<Props> = ({
+  className,
   color = 'default',
   size = 'medium',
   variant = 'contained',
@@ -28,6 +30,7 @@ export const Button: React.FC<Props> = ({
 
   return (
     <StyledButton
+      className={className}
       type="button"
       color={color}
       size={size}
@@ -41,7 +44,7 @@ export const Button: React.FC<Props> = ({
   );
 };
 
-type StyledProps = Omit<Required<Props>, 'onClick'>;
+type StyledProps = Omit<Required<Props>, 'className' | 'onClick'>;
 const StyledButton = styled.button<StyledProps>`
   font-weight: 700;
   border: ${({ variant }) => (variant === 'outlined' ? '1px' : 0)};

@@ -96,6 +96,17 @@ export type ChipColor = PaletteColor;
 export type ChipSize = Size;
 export type ChipVariant = 'default' | 'outlined';
 
+export type CheckboxColor = PaletteColor;
+export type CheckboxSize = Size;
+
+const iconSize = {
+  small: 18,
+  medium: 24,
+  large: 36,
+};
+export type IconSize = keyof typeof iconSize;
+export type IconColor = PaletteColor;
+
 const borderColor = {
   default: colorPalette.default.dark,
   primary: colorPalette.primary.dark,
@@ -127,6 +138,9 @@ export const lightTheme = {
     size: fontSize,
     weight: fontWeight,
     letterSpacing: fontLetterSpacing,
+  },
+  icon: {
+    size: iconSize,
   },
   padding,
 };

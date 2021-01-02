@@ -1,8 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
 import { ChipSize, ChipColor, ChipVariant } from '../../../styles';
+import { CancelIcon } from '../Icons';
 
 type Props = {
+  className?: string;
   color?: ChipColor;
   size?: ChipSize;
   variant?: ChipVariant;
@@ -12,6 +14,7 @@ type Props = {
 };
 
 export const Chip: React.FC<Props> = ({
+  className,
   color = 'default',
   size = 'small',
   variant = 'default',
@@ -38,6 +41,7 @@ export const Chip: React.FC<Props> = ({
 
   return (
     <StyledRoot
+      className={className}
       color={color}
       size={size}
       variant={variant}
@@ -45,15 +49,19 @@ export const Chip: React.FC<Props> = ({
       isClickable={isClickable}
       onClick={onClickHandler}
     >
-      <StyledContentWrapper>
-        <StyledContent>{children}</StyledContent>
-        {onDelete && <StyledDeleteIcon onClick={onDeleteHandler}>X</StyledDeleteIcon>}
-      </StyledContentWrapper>
+      <StyledContent>
+        {children}
+        {onDelete && (
+          <StyledCancelIconWrapper color={color} variant={variant} size={size} onClick={onDeleteHandler}>
+            <StyledCancelIcon size={size} />
+          </StyledCancelIconWrapper>
+        )}
+      </StyledContent>
     </StyledRoot>
   );
 };
 
-type StyledRootProps = Omit<Required<Props>, 'onClick' | 'onDelete'> & { isClickable: boolean };
+type StyledRootProps = Omit<Required<Props>, 'className' | 'onClick' | 'onDelete'> & { isClickable: boolean };
 const StyledRoot = styled.div<StyledRootProps>`
   display: inline-block;
   border: ${({ variant }) => variant === 'outlined' && '1px'};
@@ -75,17 +83,21 @@ const StyledRoot = styled.div<StyledRootProps>`
     opacity: ${({ isClickable }) => isClickable && 0.5};
   }
 `;
-const StyledContentWrapper = styled.div`
-  display: inline-block;
-`;
 const StyledContent = styled.div`
   display: inline-flex;
   justify-content: center;
   align-items: center;
 `;
-// TODO: replace Icons
-const StyledDeleteIcon = styled.span`
-  color: ${({ theme }) => theme.font.color.lightGray};
-  font-size: ${({ theme }) => theme.font.size.medium};
-  padding-left: 10px;
+
+const StyledCancelIcon = styled(CancelIcon)``;
+
+type StyledCancelIconWrapperProps = Pick<Required<Props>, 'variant' | 'color' | 'size'>;
+const StyledCancelIconWrapper = styled.div<StyledCancelIconWrapperProps>`
+  display: inline-flex;
+  padding-left: 5px;
+  padding-bottom: ${({ size }) => size === 'small' && '2px'};
+  & > ${StyledCancelIcon} {
+    fill: ${({ theme, variant, color }) =>
+      variant === 'outlined' ? theme.color.palette[color].main : theme.font.color.white};
+  }
 `;

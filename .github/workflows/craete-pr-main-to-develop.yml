@@ -1,0 +1,30 @@
+# This is a basic workflow to help you get started with Actions
+
+name: Create PR main to develop
+
+# Controls when the action will run. 
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  create_pr:
+    runs-on: ubuntu-latest
+    steps:
+    # checkout repository
+    - name: checkout main branch
+      uses: actions/checkout@v1
+      with:
+        ref: main
+
+    # install hub
+    - name: install hub
+      uses: geertvdc/setup-hub@v1.0.0
+
+    # create PR
+    - name: create PR
+      env:
+        GITHUB_USER: ${{ secrets.GITHUB_USER }}
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      run: |
+        hub pull-request -b develop -m "apply: main to develop"
