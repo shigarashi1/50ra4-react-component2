@@ -41,7 +41,7 @@ export const SvgIcon: React.FC<Props> = ({
 
 type StyledProps = Pick<Required<Props>, 'color' | 'size'>;
 const StyledSvg = styled.svg<StyledProps>`
-  fill: ${({ color, theme }) => theme.color.palette[color].main};
-  width: ${({ size, theme }) => `${theme.icon.size[size]}px`};
-  height: ${({ size, theme }) => `${theme.icon.size[size]}px`};
+  fill: ${({ color, theme }) => theme.palette[color].main};
+  width: ${({ size, theme }) => `${theme.iconSize[size]}px`};
+  height: ${({ size, theme }) => `${theme.iconSize[size]}px`};
 `;

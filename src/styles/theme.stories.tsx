@@ -5,7 +5,7 @@ import { createStoryMeta, createStoryTemplate } from '../storybookUtils';
 
 import { lightTheme } from './theme';
 
-const { palette } = lightTheme.color;
+const { palette } = lightTheme;
 
 const Component: React.FC = () => {
   const paletteKeys = keys(palette);

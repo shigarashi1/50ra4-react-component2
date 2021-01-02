@@ -65,17 +65,16 @@ type StyledRootProps = Omit<Required<Props>, 'className' | 'onClick' | 'onDelete
 const StyledRoot = styled.div<StyledRootProps>`
   display: inline-block;
   border: ${({ variant }) => variant === 'outlined' && '1px'};
-  border-color: ${({ theme, variant, color }) => variant === 'outlined' && theme.color.palette[color].main};
+  border-color: ${({ theme, variant, color }) => variant === 'outlined' && theme.palette[color].main};
   border-style: ${({ variant }) => variant === 'outlined' && 'solid'};
   border-radius: 100px;
   cursor: ${({ isClickable }) => (!isClickable ? 'default' : 'pointer')};
   opacity: ${({ disabled }) => disabled && 0.5};
-  background-color: ${({ theme, variant, color }) =>
-    variant === 'outlined' ? 'inherit' : theme.color.palette[color].main};
+  background-color: ${({ theme, variant, color }) => (variant === 'outlined' ? 'inherit' : theme.palette[color].main)};
   padding: ${({ theme, size }) => theme.padding[size]};
   /** default font */
   color: ${({ theme, variant, color }) =>
-    variant === 'outlined' ? theme.color.palette[color].main : theme.font.color.white};
+    variant === 'outlined' ? theme.palette[color].main : theme.font.color.white};
   font-size: ${({ theme, size }) => `${theme.font.size[size]}px`};
   font-weight: ${({ theme, size }) => size === 'large' && theme.font.weight.bold};
   letter-spacing: ${({ theme, size }) => size === 'large' && theme.font.letterSpacing.wider};
@@ -98,6 +97,6 @@ const StyledCancelIconWrapper = styled.div<StyledCancelIconWrapperProps>`
   padding-bottom: ${({ size }) => size === 'small' && '2px'};
   & > ${StyledCancelIcon} {
     fill: ${({ theme, variant, color }) =>
-      variant === 'outlined' ? theme.color.palette[color].main : theme.font.color.white};
+      variant === 'outlined' ? theme.palette[color].main : theme.font.color.white};
   }
 `;

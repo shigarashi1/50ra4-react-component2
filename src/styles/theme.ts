@@ -88,19 +88,6 @@ const iconSize = {
   large: 36,
 };
 
-const borderColor = {
-  default: colorPalette.default.dark,
-  primary: colorPalette.primary.dark,
-  secondary: colorPalette.secondary.dark,
-  positive: colorPalette.positive.dark,
-  negative: colorPalette.negative.dark,
-  success: colorPalette.success.dark,
-  error: colorPalette.error.dark,
-  warning: colorPalette.warning.dark,
-  info: colorPalette.info.dark,
-  purple: colorPalette.purple.dark,
-};
-
 const padding = {
   small: '8px 16px',
   medium: '12px 24px',
@@ -108,10 +95,7 @@ const padding = {
 };
 
 export const lightTheme = {
-  color: {
-    palette: colorPalette,
-    border: borderColor,
-  },
+  palette: colorPalette,
   font: {
     color: fontColor,
     family: fontFamily,
@@ -119,9 +103,7 @@ export const lightTheme = {
     weight: fontWeight,
     letterSpacing: fontLetterSpacing,
   },
-  icon: {
-    size: iconSize,
-  },
+  iconSize,
   padding,
 };
 
