@@ -11,4 +11,7 @@ export const GlobalStyle = createGlobalStyle<{ theme: StyledTheme }>`
     font-family: ${({ theme }) => theme.font.family};
     letter-spacing: ${({ theme }) => theme.font.letterSpacing.default};
   }
+  body {
+    background-color: ${({ theme }) => theme.color.background};
+  }
 `;

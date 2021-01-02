@@ -1,3 +1,5 @@
+import { css } from 'styled-components';
+
 // https://material.io/resources/color/#!/?view.left=0&view.right=0
 const colorPalette = {
   default: {
@@ -94,14 +96,27 @@ const padding = {
   large: '15px 32px',
 };
 
+const ellipsis = (width: string | number = '100%') => css`
+  display: inline-block;
+  max-width: ${width};
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-wrap: normal;
+`;
+
 export const lightTheme = {
   palette: colorPalette,
+  color: {
+    background: colorPalette.default.dark,
+  },
   font: {
     color: fontColor,
     family: fontFamily,
     size: fontSize,
     weight: fontWeight,
     letterSpacing: fontLetterSpacing,
+    ellipsis,
   },
   iconSize,
   padding,
