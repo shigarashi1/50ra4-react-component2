@@ -22,4 +22,3 @@ export type CheckboxSize = Size;
 
 export type IconColor = PaletteColor;
 export type IconSize = keyof typeof lightTheme.icon.size;
-export type BorderColor = keyof typeof lightTheme.color.border;
