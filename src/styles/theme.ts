@@ -52,10 +52,6 @@ const colorPalette = {
   },
 };
 
-export type PaletteColor = keyof typeof colorPalette;
-type Size = 'small' | 'medium' | 'large';
-type Variant = 'contained' | 'outlined' | 'text';
-
 const fontColor = {
   default: '#ffffff',
   primary: '#ffffff',
@@ -65,7 +61,6 @@ const fontColor = {
   gray: '#808080',
   lightGray: '#d3d3d3',
 };
-export type FontColor = keyof typeof fontColor;
 
 const fontSize = {
   extraSmall: 12,
@@ -74,7 +69,6 @@ const fontSize = {
   large: 18,
   extraLarge: 22,
 };
-export type FontSize = keyof typeof fontSize;
 
 const fontFamily = '"Helvetica Neue",Arial,"Hiragino Kaku Gothic ProN","Hiragino Sans",Meiryo,sans-serif';
 
@@ -88,24 +82,11 @@ const fontLetterSpacing = {
   wider: '0.1em',
 };
 
-export type ButtonColor = PaletteColor;
-export type ButtonSize = Size;
-export type ButtonVariant = Variant;
-
-export type ChipColor = PaletteColor;
-export type ChipSize = Size;
-export type ChipVariant = 'default' | 'outlined';
-
-export type CheckboxColor = PaletteColor;
-export type CheckboxSize = Size;
-
 const iconSize = {
   small: 18,
   medium: 24,
   large: 36,
 };
-export type IconSize = keyof typeof iconSize;
-export type IconColor = PaletteColor;
 
 const borderColor = {
   default: colorPalette.default.dark,
@@ -119,7 +100,6 @@ const borderColor = {
   info: colorPalette.info.dark,
   purple: colorPalette.purple.dark,
 };
-export type BorderColor = keyof typeof borderColor;
 
 const padding = {
   small: '8px 16px',
@@ -144,7 +124,7 @@ export const lightTheme = {
   },
   padding,
 };
-export type StyledTheme = typeof lightTheme;
-export const darkTheme: StyledTheme = {
+
+export const darkTheme: typeof lightTheme = {
   ...lightTheme,
 };

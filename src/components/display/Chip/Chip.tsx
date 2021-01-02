@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { ChipSize, ChipColor, ChipVariant } from '../../../styles';
+import { ChipSize, ChipColor, ChipVariant } from '../../../types';
 import { CancelIcon } from '../Icons';
 
 type Props = {

@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { CheckboxColor, CheckboxSize } from '../../../styles';
+import { CheckboxColor, CheckboxSize } from '../../../types';
 import { CheckboxIcon } from '../../display';
 
 type Props = {
