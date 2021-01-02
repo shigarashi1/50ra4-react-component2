@@ -7,7 +7,7 @@ exports[`Storyshots display/Chip Docs 1`] = `
   cursor: default;
   background-color: #263228;
   padding: 8px 16px;
-  color: #ffffff;
+  color: #fafafa;
   font-size: 14px;
 }
 
@@ -46,9 +46,9 @@ exports[`Storyshots display/Chip With Delete Icon 1`] = `
   display: inline-block;
   border-radius: 100px;
   cursor: default;
-  background-color: #1e90ff;
+  background-color: #0d47a1;
   padding: 8px 16px;
-  color: #ffffff;
+  color: #fafafa;
   font-size: 14px;
 }
 
@@ -84,7 +84,7 @@ exports[`Storyshots display/Chip With Delete Icon 1`] = `
 
 exports[`Storyshots display/Icons Docs 1`] = `
 .c0 {
-  fill: #263228;
+  fill: #4e5b50;
   width: 36px;
   height: 36px;
 }
@@ -109,7 +109,7 @@ exports[`Storyshots display/Icons Docs 1`] = `
 
 exports[`Storyshots display/Icons Icon List 1`] = `
 .c3 {
-  fill: #2e7c31;
+  fill: #60ac5d;
   width: 36px;
   height: 36px;
 }
@@ -536,7 +536,7 @@ exports[`Storyshots inputs/Button Docs 1`] = `
   font-size: 16px;
   padding: 12px 24px;
   background-color: #263228;
-  color: #ffffff;
+  color: #fafafa;
 }
 
 .c0:hover {
@@ -557,7 +557,7 @@ exports[`Storyshots inputs/Button Docs 1`] = `
 
 exports[`Storyshots inputs/Checkbox Docs 1`] = `
 .c3 {
-  fill: #263228;
+  fill: #4e5b50;
   width: 24px;
   height: 24px;
 }
@@ -658,7 +658,7 @@ exports[`Storyshots inputs/Checkbox Docs 1`] = `
 
 exports[`Storyshots inputs/IconButton Docs 1`] = `
 .c1 {
-  fill: #263228;
+  fill: #4e5b50;
   width: 24px;
   height: 24px;
 }
@@ -712,7 +712,7 @@ exports[`Storyshots inputs/IconButton Docs 1`] = `
 
 exports[`Storyshots inputs/TextInput Docs 1`] = `
 .c4 {
-  fill: #a9a9a9;
+  fill: #62727b;
   width: 18px;
   height: 18px;
 }
@@ -751,7 +751,7 @@ exports[`Storyshots inputs/TextInput Docs 1`] = `
   width: 100%;
   background-color: #ffffff;
   border-width: 1px;
-  border-color: #a9a9a9;
+  border-color: #2c3630;
   border-style: solid;
   border-radius: 3px;
   padding: 2px;
