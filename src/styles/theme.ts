@@ -1,71 +1,30 @@
-// https://material.io/resources/color/#!/?view.left=0&view.right=0
-const colorPalette = {
-  default: {
-    light: '#dbdbdb',
-    main: '#a9a9a9',
-    dark: '#7a7a7a',
-  },
-  primary: {
-    light: '#4e5b50',
-    main: '#263228',
-    dark: '#000b00',
-  },
-  secondary: {
-    light: '#60ac5d',
-    main: '#2e7c31',
-    dark: '#004f04',
-  },
-  positive: {
-    light: '#60ac5d',
-    main: '#2e7c31',
-    dark: '#004f04',
-  },
-  negative: {
-    light: '#dbdbdb',
-    main: '#a9a9a9',
-    dark: '#7a7a7a',
-  },
-  success: {
-    light: '#60ac5d',
-    main: '#2e7c31',
-    dark: '#004f04',
-  },
-  error: {
-    light: '#ff9574',
-    main: '#ff6347',
-    dark: '#c52e1d',
-  },
-  warning: {
-    light: '#ffff52',
-    main: '#ffd700',
-    dark: '#c7a600',
-  },
-  info: {
-    light: '#6fc0ff',
-    main: '#1e90ff',
-    dark: '#0063cb',
-  },
-  purple: {
-    light: '#d05ce3',
-    main: '#9c27b0',
-    dark: '#6a0080',
-  },
+import { css } from 'styled-components';
+import { colorPalette, fontColorPalette, background2fontColors } from './palette';
+import { Color, ColorTheme, ColorTone } from '../types';
+
+const colorTheme: Record<ColorTheme, Color> = {
+  default: 'darkGray',
+  primary: 'black',
+  secondary: 'green',
+  positive: 'green',
+  negative: 'gray',
+  success: 'green',
+  error: 'red',
+  warning: 'yellow',
+  info: 'blue',
+  highlight: 'purple',
 };
 
-export type PaletteColor = keyof typeof colorPalette;
-type Size = 'small' | 'medium' | 'large';
-type Variant = 'contained' | 'outlined' | 'text';
+const colorPairs = Object.entries(colorTheme) as [ColorTheme, Color][];
+const colorTheme2color = (tone: ColorTone) =>
+  // eslint-disable-next-line prettier/prettier
+  Object.fromEntries(
+    colorPairs.map(([theme, color]) => [theme, colorPalette[color][tone]]),
+  ) as Record<ColorTheme, string>;
 
-const fontColor = {
-  default: '#ffffff',
-  primary: '#ffffff',
-  secondary: '#ffffff',
-  white: '#ffffff',
-  black: '#000000',
-  gray: '#808080',
-  lightGray: '#d3d3d3',
-};
-export type FontColor = keyof typeof fontColor;
+const lightColors = colorTheme2color('light');
+const mainColors = colorTheme2color('main');
+// const darkColors = colorTheme2color('dark');
 
 const fontSize = {
   extraSmall: 12,
@@ -74,7 +33,6 @@ const fontSize = {
   large: 18,
   extraLarge: 22,
 };
-export type FontSize = keyof typeof fontSize;
 
 const fontFamily = '"Helvetica Neue",Arial,"Hiragino Kaku Gothic ProN","Hiragino Sans",Meiryo,sans-serif';
 
@@ -88,38 +46,17 @@ const fontLetterSpacing = {
   wider: '0.1em',
 };
 
-export type ButtonColor = PaletteColor;
-export type ButtonSize = Size;
-export type ButtonVariant = Variant;
-
-export type ChipColor = PaletteColor;
-export type ChipSize = Size;
-export type ChipVariant = 'default' | 'outlined';
-
-export type CheckboxColor = PaletteColor;
-export type CheckboxSize = Size;
-
 const iconSize = {
   small: 18,
   medium: 24,
   large: 36,
 };
-export type IconSize = keyof typeof iconSize;
-export type IconColor = PaletteColor;
 
-const borderColor = {
-  default: colorPalette.default.dark,
-  primary: colorPalette.primary.dark,
-  secondary: colorPalette.secondary.dark,
-  positive: colorPalette.positive.dark,
-  negative: colorPalette.negative.dark,
-  success: colorPalette.success.dark,
-  error: colorPalette.error.dark,
-  warning: colorPalette.warning.dark,
-  info: colorPalette.info.dark,
-  purple: colorPalette.purple.dark,
+const iconColors: Record<ColorTheme, string> = {
+  ...lightColors,
+  warning: mainColors.warning,
+  highlight: mainColors.highlight,
 };
-export type BorderColor = keyof typeof borderColor;
 
 const padding = {
   small: '8px 16px',
@@ -127,24 +64,52 @@ const padding = {
   large: '15px 32px',
 };
 
+const ellipsis = (width: string | number = '100%') => css`
+  display: inline-block;
+  max-width: ${width};
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-wrap: normal;
+`;
+
+const focusBoxShadow = (focused: boolean, hasError?: boolean) => css`
+  box-shadow: ${(focused || hasError) && `0 0 0 2px ${focused ? colorPalette.green.light : colorPalette.red.light}`};
+`;
+
 export const lightTheme = {
-  color: {
-    palette: colorPalette,
-    border: borderColor,
+  palette: colorPalette,
+  body: {
+    backgroundColor: colorPalette.white.main,
+    color: background2fontColors['white'],
   },
   font: {
-    color: fontColor,
+    color: fontColorPalette,
     family: fontFamily,
     size: fontSize,
     weight: fontWeight,
     letterSpacing: fontLetterSpacing,
+    ellipsis,
+  },
+  chip: {
+    color: mainColors,
+    padding: padding,
+  },
+  button: {
+    color: mainColors,
+    padding: padding,
   },
   icon: {
+    color: iconColors,
     size: iconSize,
   },
-  padding,
+  input: {
+    color: lightColors,
+    borderColor: colorPalette.gray.dark,
+    focusBoxShadow,
+  },
 };
-export type StyledTheme = typeof lightTheme;
-export const darkTheme: StyledTheme = {
+
+export const darkTheme: typeof lightTheme = {
   ...lightTheme,
 };

@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { IconColor, IconSize } from '../../../styles';
+import { IconColor, IconSize } from '../../../types';
 
 export type IconProps = {
   className?: string;
@@ -41,7 +41,7 @@ export const SvgIcon: React.FC<Props> = ({
 
 type StyledProps = Pick<Required<Props>, 'color' | 'size'>;
 const StyledSvg = styled.svg<StyledProps>`
-  fill: ${({ color, theme }) => theme.color.palette[color].main};
+  fill: ${({ color, theme }) => theme.icon.color[color]};
   width: ${({ size, theme }) => `${theme.icon.size[size]}px`};
   height: ${({ size, theme }) => `${theme.icon.size[size]}px`};
 `;

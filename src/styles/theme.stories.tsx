@@ -3,19 +3,17 @@ import { keys, toPairs } from '50ra4-library';
 
 import { createStoryMeta, createStoryTemplate } from '../storybookUtils';
 
-import { lightTheme } from './theme';
-
-const { palette } = lightTheme.color;
+import { colorPalette } from './palette';
 
 const Component: React.FC = () => {
-  const paletteKeys = keys(palette);
+  const paletteKeys = keys(colorPalette);
   return (
     <StyledRoot>
       {paletteKeys.map((title) => (
         <div key={title}>
           <StyledPaletteLabel>{title}</StyledPaletteLabel>
           <StyledPaletteWrapper>
-            {toPairs(palette[title]).map(([label, color]) => (
+            {toPairs(colorPalette[title]).map(([label, color]) => (
               <StyledColor key={label} color={color}>
                 <div>
                   <StyledColorText isBlack={true}>{`${label}(${color})`}</StyledColorText>

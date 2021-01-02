@@ -4,18 +4,22 @@ Storybook [Check github pages](https://shigarashi1.github.io/50ra4-react-compone
 
 ## refactor
 - [ ] fix: font-size and icon-size
-- [ ] move: style type definition to types
+- [x] move: style type definition to types
+- [x] fix: theme props
+- [x] fix: color palette
+- [x] fix: theme props
+- [ ] fix: organize css definition
 
 ## components
 
 ### inputs
-- [x] Button
-- [ ] TextInput
+- [x] Button 4h
+- [x] TextInput 8h
 - [ ] DateInput
 - [ ] SelectInput
 - [ ] TextareaInput
 - [ ] RadioButton
-- [x] Checkbox
+- [x] Checkbox 8h
 - [ ] ToggleButton
 - [ ] RadioButtonGroup
 - [ ] CheckboxGroup
@@ -46,8 +50,8 @@ Storybook [Check github pages](https://shigarashi1.github.io/50ra4-react-compone
 	- [ ] Select
 
 # display
-- [x] Icons
-- [x] Chip
+- [x] Icons 4h
+- [x] Chip 4h
 - [ ] Label
 - [ ] WithLabel
 - [ ] Badge（https://material-ui.com/components/badges/）

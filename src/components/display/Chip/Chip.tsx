@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { ChipSize, ChipColor, ChipVariant } from '../../../styles';
+import { ChipSize, ChipColor, ChipVariant } from '../../../types';
 import { CancelIcon } from '../Icons';
 
 type Props = {
@@ -65,17 +65,15 @@ type StyledRootProps = Omit<Required<Props>, 'className' | 'onClick' | 'onDelete
 const StyledRoot = styled.div<StyledRootProps>`
   display: inline-block;
   border: ${({ variant }) => variant === 'outlined' && '1px'};
-  border-color: ${({ theme, variant, color }) => variant === 'outlined' && theme.color.palette[color].main};
+  border-color: ${({ theme, variant, color }) => variant === 'outlined' && theme.chip.color[color]};
   border-style: ${({ variant }) => variant === 'outlined' && 'solid'};
   border-radius: 100px;
   cursor: ${({ isClickable }) => (!isClickable ? 'default' : 'pointer')};
   opacity: ${({ disabled }) => disabled && 0.5};
-  background-color: ${({ theme, variant, color }) =>
-    variant === 'outlined' ? 'inherit' : theme.color.palette[color].main};
-  padding: ${({ theme, size }) => theme.padding[size]};
+  background-color: ${({ theme, variant, color }) => (variant === 'outlined' ? 'inherit' : theme.chip.color[color])};
+  padding: ${({ theme, size }) => theme.chip.padding[size]};
   /** default font */
-  color: ${({ theme, variant, color }) =>
-    variant === 'outlined' ? theme.color.palette[color].main : theme.font.color.white};
+  color: ${({ theme, variant, color }) => (variant === 'outlined' ? theme.chip.color[color] : theme.font.color.white)};
   font-size: ${({ theme, size }) => `${theme.font.size[size]}px`};
   font-weight: ${({ theme, size }) => size === 'large' && theme.font.weight.bold};
   letter-spacing: ${({ theme, size }) => size === 'large' && theme.font.letterSpacing.wider};
@@ -97,7 +95,6 @@ const StyledCancelIconWrapper = styled.div<StyledCancelIconWrapperProps>`
   padding-left: 5px;
   padding-bottom: ${({ size }) => size === 'small' && '2px'};
   & > ${StyledCancelIcon} {
-    fill: ${({ theme, variant, color }) =>
-      variant === 'outlined' ? theme.color.palette[color].main : theme.font.color.white};
+    fill: ${({ theme, variant, color }) => (variant === 'outlined' ? theme.chip.color[color] : theme.font.color.white)};
   }
 `;

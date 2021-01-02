@@ -7,7 +7,7 @@ exports[`Storyshots display/Chip Docs 1`] = `
   cursor: default;
   background-color: #263228;
   padding: 8px 16px;
-  color: #ffffff;
+  color: #fafafa;
   font-size: 14px;
 }
 
@@ -41,186 +41,14 @@ exports[`Storyshots display/Chip Docs 1`] = `
 </div>
 `;
 
-exports[`Storyshots display/Chip Large 1`] = `
-.c0 {
-  display: inline-block;
-  border-radius: 100px;
-  cursor: default;
-  background-color: #ff6347;
-  padding: 15px 32px;
-  color: #ffffff;
-  font-size: 18px;
-  font-weight: 700;
-  -webkit-letter-spacing: 0.1em;
-  -moz-letter-spacing: 0.1em;
-  -ms-letter-spacing: 0.1em;
-  letter-spacing: 0.1em;
-}
-
-.c1 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-<div
-  className="c0"
-  color="error"
-  disabled={false}
-  onClick={[Function]}
-  size="large"
->
-  <div
-    className="c1"
-  >
-    Large
-  </div>
-</div>
-`;
-
-exports[`Storyshots display/Chip Medium 1`] = `
-.c0 {
-  display: inline-block;
-  border-radius: 100px;
-  cursor: default;
-  background-color: #a9a9a9;
-  padding: 12px 24px;
-  color: #ffffff;
-  font-size: 16px;
-}
-
-.c1 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-<div
-  className="c0"
-  color="default"
-  disabled={false}
-  onClick={[Function]}
-  size="medium"
->
-  <div
-    className="c1"
-  >
-    Medium
-  </div>
-</div>
-`;
-
-exports[`Storyshots display/Chip Outlined 1`] = `
-.c0 {
-  display: inline-block;
-  border: 1px;
-  border-color: #9c27b0;
-  border-style: solid;
-  border-radius: 100px;
-  cursor: default;
-  background-color: inherit;
-  padding: 8px 16px;
-  color: #9c27b0;
-  font-size: 14px;
-}
-
-.c1 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-<div
-  className="c0"
-  color="purple"
-  disabled={false}
-  onClick={[Function]}
-  size="small"
->
-  <div
-    className="c1"
-  >
-    Large
-  </div>
-</div>
-`;
-
-exports[`Storyshots display/Chip Secondary 1`] = `
-.c0 {
-  display: inline-block;
-  border-radius: 100px;
-  cursor: default;
-  background-color: #2e7c31;
-  padding: 8px 16px;
-  color: #ffffff;
-  font-size: 14px;
-}
-
-.c1 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-<div
-  className="c0"
-  color="secondary"
-  disabled={false}
-  onClick={[Function]}
-  size="small"
->
-  <div
-    className="c1"
-  >
-    Secondary
-  </div>
-</div>
-`;
-
 exports[`Storyshots display/Chip With Delete Icon 1`] = `
 .c0 {
   display: inline-block;
   border-radius: 100px;
   cursor: default;
-  background-color: #1e90ff;
+  background-color: #0d47a1;
   padding: 8px 16px;
-  color: #ffffff;
+  color: #fafafa;
   font-size: 14px;
 }
 
@@ -256,7 +84,7 @@ exports[`Storyshots display/Chip With Delete Icon 1`] = `
 
 exports[`Storyshots display/Icons Docs 1`] = `
 .c0 {
-  fill: #263228;
+  fill: #4e5b50;
   width: 36px;
   height: 36px;
 }
@@ -279,9 +107,9 @@ exports[`Storyshots display/Icons Docs 1`] = `
 </svg>
 `;
 
-exports[`Storyshots display/Icons Icons 1`] = `
+exports[`Storyshots display/Icons Icon List 1`] = `
 .c3 {
-  fill: #2e7c31;
+  fill: #60ac5d;
   width: 36px;
   height: 36px;
 }
@@ -365,7 +193,7 @@ exports[`Storyshots display/Icons Icons 1`] = `
           fill="none"
         />
         <path
-          d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"
+          d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
         />
       </svg>
     </div>
@@ -455,33 +283,6 @@ exports[`Storyshots display/Icons Icons 1`] = `
     className="c1"
   >
     <p>
-      ChevronLeftIcon
-    </p>
-    <div
-      className="c2"
-    >
-      <svg
-        aria-hidden={true}
-        className="c3"
-        color="secondary"
-        size="large"
-        viewBox="0 0 24 24"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M0 0h24v24H0z"
-          fill="none"
-        />
-        <path
-          d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"
-        />
-      </svg>
-    </div>
-  </div>
-  <div
-    className="c1"
-  >
-    <p>
       CloseIcon
     </p>
     <div
@@ -528,6 +329,33 @@ exports[`Storyshots display/Icons Icons 1`] = `
         />
         <path
           d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
+        />
+      </svg>
+    </div>
+  </div>
+  <div
+    className="c1"
+  >
+    <p>
+      HighLightOffIcon
+    </p>
+    <div
+      className="c2"
+    >
+      <svg
+        aria-hidden={true}
+        className="c3"
+        color="secondary"
+        size="large"
+        viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M0 0h24v24H0z"
+          fill="none"
+        />
+        <path
+          d="M14.59 8L12 10.59 9.41 8 8 9.41 10.59 12 8 14.59 9.41 16 12 13.41 14.59 16 16 14.59 13.41 12 16 9.41 14.59 8zM12 2C6.47 2 2 6.47 2 12s4.47 10 10 10 10-4.47 10-10S17.53 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"
         />
       </svg>
     </div>
@@ -697,100 +525,7 @@ exports[`Storyshots display/Icons Icons 1`] = `
 </div>
 `;
 
-exports[`Storyshots inputs/Button Disabled 1`] = `
-.c0 {
-  font-weight: 700;
-  border: 0;
-  border-radius: 3px;
-  cursor: default;
-  opacity: 0.5;
-  display: inline-block;
-  line-height: 1;
-  font-size: 16px;
-  padding: 12px 24px;
-  background-color: #ffd700;
-  color: #ffffff;
-}
-
-.c0:hover {
-  opacity: 0.5;
-}
-
-<button
-  className="c0"
-  color="warning"
-  disabled={true}
-  onClick={[Function]}
-  size="medium"
-  type="button"
->
-  Text
-</button>
-`;
-
-exports[`Storyshots inputs/Button Large 1`] = `
-.c0 {
-  font-weight: 700;
-  border: 0;
-  border-radius: 3px;
-  cursor: pointer;
-  display: inline-block;
-  line-height: 1;
-  font-size: 18px;
-  padding: 15px 32px;
-  background-color: #1e90ff;
-  color: #ffffff;
-}
-
-.c0:hover {
-  opacity: 0.5;
-}
-
-<button
-  className="c0"
-  color="info"
-  disabled={false}
-  onClick={[Function]}
-  size="large"
-  type="button"
->
-  Large
-</button>
-`;
-
-exports[`Storyshots inputs/Button Outlined 1`] = `
-.c0 {
-  font-weight: 700;
-  border: 1px;
-  border-color: #ff6347;
-  border-style: solid;
-  border-radius: 3px;
-  cursor: pointer;
-  display: inline-block;
-  line-height: 1;
-  font-size: 16px;
-  padding: 12px 24px;
-  background-color: inherit;
-  color: #ff6347;
-}
-
-.c0:hover {
-  opacity: 0.5;
-}
-
-<button
-  className="c0"
-  color="error"
-  disabled={false}
-  onClick={[Function]}
-  size="medium"
-  type="button"
->
-  Outline
-</button>
-`;
-
-exports[`Storyshots inputs/Button Primary 1`] = `
+exports[`Storyshots inputs/Button Docs 1`] = `
 .c0 {
   font-weight: 700;
   border: 0;
@@ -801,7 +536,7 @@ exports[`Storyshots inputs/Button Primary 1`] = `
   font-size: 16px;
   padding: 12px 24px;
   background-color: #263228;
-  color: #ffffff;
+  color: #fafafa;
 }
 
 .c0:hover {
@@ -820,69 +555,9 @@ exports[`Storyshots inputs/Button Primary 1`] = `
 </button>
 `;
 
-exports[`Storyshots inputs/Button Secondary 1`] = `
-.c0 {
-  font-weight: 700;
-  border: 0;
-  border-radius: 3px;
-  cursor: pointer;
-  display: inline-block;
-  line-height: 1;
-  font-size: 16px;
-  padding: 12px 24px;
-  background-color: #2e7c31;
-  color: #ffffff;
-}
-
-.c0:hover {
-  opacity: 0.5;
-}
-
-<button
-  className="c0"
-  color="secondary"
-  disabled={false}
-  onClick={[Function]}
-  size="medium"
-  type="button"
->
-  Secondary
-</button>
-`;
-
-exports[`Storyshots inputs/Button Text 1`] = `
-.c0 {
-  font-weight: 700;
-  border: 0;
-  border-radius: 3px;
-  cursor: pointer;
-  display: inline-block;
-  line-height: 1;
-  font-size: 16px;
-  padding: 12px 24px;
-  background-color: inherit;
-  color: #9c27b0;
-}
-
-.c0:hover {
-  opacity: 0.5;
-}
-
-<button
-  className="c0"
-  color="purple"
-  disabled={false}
-  onClick={[Function]}
-  size="medium"
-  type="button"
->
-  Text
-</button>
-`;
-
 exports[`Storyshots inputs/Checkbox Docs 1`] = `
 .c3 {
-  fill: #a9a9a9;
+  fill: #4e5b50;
   width: 24px;
   height: 24px;
 }
@@ -954,7 +629,7 @@ exports[`Storyshots inputs/Checkbox Docs 1`] = `
     <svg
       aria-hidden={true}
       className="c3"
-      color="default"
+      color="primary"
       size="medium"
       viewBox="0 0 24 24"
       xmlns="http://www.w3.org/2000/svg"
@@ -970,7 +645,7 @@ exports[`Storyshots inputs/Checkbox Docs 1`] = `
   </div>
   <label
     className="c4"
-    color="default"
+    color="primary"
     disabled={false}
     htmlFor="checkbox"
     required={false}
@@ -978,5 +653,163 @@ exports[`Storyshots inputs/Checkbox Docs 1`] = `
   >
     Checkbox
   </label>
+</div>
+`;
+
+exports[`Storyshots inputs/IconButton Docs 1`] = `
+.c1 {
+  fill: #4e5b50;
+  width: 24px;
+  height: 24px;
+}
+
+.c0 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: inherit;
+  padding: 2px;
+  border: none;
+  cursor: pointer;
+}
+
+.c0:hover {
+  opacity: 0.5;
+}
+
+<button
+  className="c0"
+  disabled={false}
+  onClick={[Function]}
+>
+  <svg
+    aria-hidden={true}
+    className="c1"
+    color="primary"
+    size="medium"
+    viewBox="0 0 24 24"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M0 0h24v24H0z"
+      fill="none"
+    />
+    <path
+      d="M17 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V7l-4-4zm-5 16c-1.66 0-3-1.34-3-3s1.34-3 3-3 3 1.34 3 3-1.34 3-3 3zm3-10H5V5h10v4z"
+    />
+  </svg>
+</button>
+`;
+
+exports[`Storyshots inputs/TextInput Docs 1`] = `
+.c4 {
+  fill: #62727b;
+  width: 18px;
+  height: 18px;
+}
+
+.c2 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: inherit;
+  padding: 2px;
+  border: none;
+  cursor: pointer;
+}
+
+.c2:hover {
+  opacity: 0.5;
+}
+
+.c0 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+  width: 100%;
+  background-color: #ffffff;
+  border-width: 1px;
+  border-color: #2c3630;
+  border-style: solid;
+  border-radius: 3px;
+  padding: 2px;
+}
+
+.c1 {
+  border: none;
+  outline: none;
+  padding: 4px;
+  width: 100%;
+  display: inline-block;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-wrap: normal;
+}
+
+.c3 {
+  border: none;
+  outline: none;
+}
+
+<div
+  className="c0"
+  disabled={false}
+>
+  <input
+    className="c1"
+    disabled={false}
+    onBlur={[Function]}
+    onChange={[Function]}
+    onCompositionEnd={[Function]}
+    onCompositionStart={[Function]}
+    onFocus={[Function]}
+    type="text"
+  />
+  <button
+    className="c2 c3"
+    disabled={false}
+    onClick={[Function]}
+  >
+    <svg
+      aria-hidden={true}
+      className="c4"
+      color="default"
+      size="small"
+      viewBox="0 0 24 24"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M0 0h24v24H0z"
+        fill="none"
+      />
+      <path
+        d="M14.59 8L12 10.59 9.41 8 8 9.41 10.59 12 8 14.59 9.41 16 12 13.41 14.59 16 16 14.59 13.41 12 16 9.41 14.59 8zM12 2C6.47 2 2 6.47 2 12s4.47 10 10 10 10-4.47 10-10S17.53 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"
+      />
+    </svg>
+  </button>
 </div>
 `;

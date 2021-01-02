@@ -11,6 +11,7 @@ const Template = createStoryTemplate(Checkbox);
 export const Docs = Template.bind({});
 Docs.args = {
   checked: true,
+  color: 'primary',
   id: 'checkbox',
   label: 'Checkbox',
 };
