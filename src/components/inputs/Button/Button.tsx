@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { ButtonColor, ButtonSize, ButtonVariant } from '../../../styles';
+import { ButtonColor, ButtonSize, ButtonVariant } from '../../../types';
 
 type Props = {
   className?: string;

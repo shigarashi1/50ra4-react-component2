@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { IconColor, IconSize } from '../../../styles';
+import { IconColor, IconSize } from '../../../types';
 
 export type IconProps = {
   className?: string;

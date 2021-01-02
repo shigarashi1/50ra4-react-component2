@@ -2,7 +2,8 @@ import React from 'react';
 import { ThemeProvider as StyledComponentThemeProvider } from 'styled-components';
 
 import { GlobalStyle } from '../styles/reset';
-import { StyledTheme, lightTheme } from '../styles/theme';
+import { lightTheme } from '../styles/theme';
+import { StyledTheme } from '../types';
 
 type Props = {
   theme?: StyledTheme;
