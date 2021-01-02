@@ -2,6 +2,10 @@
 
 Storybook [Check github pages](https://shigarashi1.github.io/50ra4-react-component2/)
 
+## refactor
+- [ ] fix: font-size and icon-size
+- [ ] move: style type definition to types
+
 ## components
 
 ### inputs
@@ -11,11 +15,11 @@ Storybook [Check github pages](https://shigarashi1.github.io/50ra4-react-compone
 - [ ] SelectInput
 - [ ] TextareaInput
 - [ ] RadioButton
-- [ ] Checkbox
+- [x] Checkbox
 - [ ] ToggleButton
-- [ ] RadioGroup
+- [ ] RadioButtonGroup
 - [ ] CheckboxGroup
-- [ ] ChipRadioGroup
+- [ ] ChipRadioButtonGroup
 - [ ] ChipCheckboxGroup
 - [ ] DatePicker
 - [ ] PasswordInput
