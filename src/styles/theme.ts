@@ -105,7 +105,8 @@ export const lightTheme = {
   },
   input: {
     color: lightColors,
-    borderColor: colorPalette.gray.dark,
+    backGroundColor: colorPalette.white.light,
+    borderColor: colorPalette.white.dark,
     focusBoxShadow,
   },
 };
