@@ -10,7 +10,7 @@ export const InputWrapper = styled.div<Props>`
   display: inline-flex;
   align-self: center;
   width: 100%;
-  background-color: #ffffff;
+  background-color: ${({ theme }) => theme.input.backGroundColor};
   opacity: ${({ disabled }) => disabled && 0.5};
   border-width: 1px;
   border-color: ${({ theme }) => theme.input.borderColor};

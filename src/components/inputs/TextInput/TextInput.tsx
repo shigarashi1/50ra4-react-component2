@@ -102,6 +102,7 @@ export const TextInput: React.FC<Props> = ({
 const StyledInput = styled.input`
   border: none;
   outline: none;
+  line-height: 20px;
   padding: 4px;
   width: 100%;
   ${({ theme }) => theme.font.ellipsis()}
