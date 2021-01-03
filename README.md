@@ -9,6 +9,9 @@ Storybook [Check github pages](https://shigarashi1.github.io/50ra4-react-compone
 - [x] fix: color palette
 - [x] fix: theme props
 - [ ] fix: organize css definition
+- [ ] fix: export props type definition for storybook 
+- [x] fix: split component
+- [ ] add: custom hooks for TextInput & TextareaInput
 
 ## components
 
