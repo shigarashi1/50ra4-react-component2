@@ -10,6 +10,10 @@ on:
 jobs:
   create_pr:
     runs-on: ubuntu-latest
+    
+    env: 
+     REPO: https://${{github.actor}}:${{secrets.GITHUB_TOKEN}}@github.com/${{github.repository}}.git
+
     steps:
     # checkout repository
     - name: checkout main branch
