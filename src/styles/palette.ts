@@ -47,6 +47,11 @@ export const colorPalette = {
     main: '#c62828',
     dark: '#8e0000',
   },
+  lightPick: {
+    light: '#ffeeff',
+    main: '#f8bbd0',
+    dark: '#c48b9f',
+  },
   pink: {
     light: '#ff5c8d',
     main: '#d81b60',
@@ -85,6 +90,7 @@ const color2fontColorDef: Record<Color, FontColorDef> = {
   blue: { light: 'black', main: 'white', dark: 'white' },
   orange: { light: 'black', main: 'black', dark: 'white' },
   red: { light: 'black', main: 'white', dark: 'white' },
+  lightPick: { light: 'black', main: 'black', dark: 'black' },
   pink: { light: 'black', main: 'white', dark: 'white' },
   purple: { light: 'white', main: 'white', dark: 'white' },
   green: { light: 'black', main: 'white', dark: 'white' },
