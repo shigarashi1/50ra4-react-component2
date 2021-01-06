@@ -1,5 +1,8 @@
 # 50ra4-react-component2
 
+![CI](https://github.com/shigarashi1/50ra4-react-component2/workflows/CI/badge.svg?branch=main)
+![Release GitHub Page](https://github.com/shigarashi1/50ra4-react-component2/workflows/Release%20GitHub%20Page/badge.svg?branch=main)
+
 Storybook [Check github pages](https://shigarashi1.github.io/50ra4-react-component2/)
 
 ## refactor
