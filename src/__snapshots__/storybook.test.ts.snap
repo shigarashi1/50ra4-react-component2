@@ -6,7 +6,7 @@ exports[`Storyshots display/Chip Docs 1`] = `
   border-radius: 100px;
   cursor: default;
   background-color: #263228;
-  padding: 8px 12px;
+  padding: 8px 16px;
   color: #fafafa;
   font-size: 14px;
 }
@@ -47,7 +47,7 @@ exports[`Storyshots display/Chip With Delete Icon 1`] = `
   border-radius: 100px;
   cursor: default;
   background-color: #0d47a1;
-  padding: 8px 12px;
+  padding: 8px 16px;
   color: #fafafa;
   font-size: 14px;
 }
