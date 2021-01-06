@@ -94,12 +94,12 @@ const fontTheme = {
 
 const chipTheme = {
   color: mainColors,
-  padding: padding,
+  padding,
 };
 
 const buttonTheme = {
   color: mainColors,
-  padding: padding,
+  padding,
 };
 
 const iconTheme = {
@@ -116,6 +116,7 @@ const inputTheme = {
 
 export const lightTheme = {
   palette: colorPalette,
+  spaceUnit,
   body: bodyTheme,
   font: fontTheme,
   chip: chipTheme,
