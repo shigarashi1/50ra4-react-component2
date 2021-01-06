@@ -16,15 +16,15 @@ jobs:
       uses: actions/checkout@v1
       with:
         ref: main
-
-    # install hub
-    - name: install hub
-      uses: geertvdc/setup-hub@v1.0.0
-
+      
     # create PR
     - name: create PR
-      env:
-        GITHUB_USER: ${{ secrets.GITHUB_USER }}
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
-        hub pull-request -b develop -m "apply: main to develop"
+        git config user.name sigarashi
+        git config user.email 48591598+shigarashi1@users.noreply.github.com
+        date > generated.txt
+        git add .
+        git commit -m "create: PR test"
+        DATE=`date "+%Y%m%d_%H%M"`
+        git checkout -b release/$DATE
+        git push -u origin release/$DATE
