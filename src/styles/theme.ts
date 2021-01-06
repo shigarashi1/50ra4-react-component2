@@ -26,13 +26,6 @@ const lightColors = colorTheme2color('light');
 const mainColors = colorTheme2color('main');
 // const darkColors = colorTheme2color('dark');
 
-const spaceUnit = 4;
-
-const bodyTheme = {
-  backgroundColor: colorPalette.white.main,
-  color: background2fontColors['white'],
-};
-
 const fontSize = {
   extraSmall: 12,
   small: 14,
@@ -41,8 +34,8 @@ const fontSize = {
   extraLarge: 22,
 };
 
-const fontFamilies = ['Hiragino Kaku Gothic ProN', 'Hiragino Sans', 'Helvetica Neue', 'Arial', 'Meiryo', 'sans-serif'];
-const fontFamily = fontFamilies.join(',');
+const fontFamily = '"Helvetica Neue",Arial,"Hiragino Kaku Gothic ProN","Hiragino Sans",Meiryo,sans-serif';
+
 const fontWeight = {
   bold: 700,
   normal: 400,
@@ -52,14 +45,6 @@ const fontLetterSpacing = {
   narrower: '0.03em',
   wider: '0.1em',
 };
-const ellipsis = (width: string | number = '100%') => css`
-  display: inline-block;
-  max-width: ${width};
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  word-wrap: normal;
-`;
 
 const iconSize = {
   small: 18,
@@ -74,55 +59,55 @@ const iconColors: Record<ColorTheme, string> = {
 };
 
 const padding = {
-  small: `${spaceUnit * 2}px ${spaceUnit * 3}px`,
-  medium: `${spaceUnit * 3}px ${spaceUnit * 6}px`,
-  large: `${spaceUnit * 4}px ${spaceUnit * 9}px`,
+  small: '8px 16px',
+  medium: '12px 24px',
+  large: '15px 32px',
 };
+
+const ellipsis = (width: string | number = '100%') => css`
+  display: inline-block;
+  max-width: ${width};
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-wrap: normal;
+`;
 
 const focusBoxShadow = (focused: boolean, hasError?: boolean) => css`
   box-shadow: ${(focused || hasError) && `0 0 0 2px ${focused ? colorPalette.green.light : colorPalette.red.light}`};
 `;
 
-const fontTheme = {
-  color: fontColorPalette,
-  family: fontFamily,
-  size: fontSize,
-  weight: fontWeight,
-  letterSpacing: fontLetterSpacing,
-  ellipsis,
-};
-
-const chipTheme = {
-  color: mainColors,
-  padding,
-};
-
-const buttonTheme = {
-  color: mainColors,
-  padding,
-};
-
-const iconTheme = {
-  color: iconColors,
-  size: iconSize,
-};
-
-const inputTheme = {
-  color: lightColors,
-  backGroundColor: colorPalette.white.light,
-  borderColor: colorPalette.white.dark,
-  focusBoxShadow,
-};
-
 export const lightTheme = {
   palette: colorPalette,
-  spaceUnit,
-  body: bodyTheme,
-  font: fontTheme,
-  chip: chipTheme,
-  button: buttonTheme,
-  icon: iconTheme,
-  input: inputTheme,
+  body: {
+    backgroundColor: colorPalette.white.main,
+    color: background2fontColors['white'],
+  },
+  font: {
+    color: fontColorPalette,
+    family: fontFamily,
+    size: fontSize,
+    weight: fontWeight,
+    letterSpacing: fontLetterSpacing,
+    ellipsis,
+  },
+  chip: {
+    color: mainColors,
+    padding: padding,
+  },
+  button: {
+    color: mainColors,
+    padding: padding,
+  },
+  icon: {
+    color: iconColors,
+    size: iconSize,
+  },
+  input: {
+    color: lightColors,
+    borderColor: colorPalette.gray.dark,
+    focusBoxShadow,
+  },
 };
 
 export const darkTheme: typeof lightTheme = {

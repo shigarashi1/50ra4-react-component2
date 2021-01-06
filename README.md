@@ -1,8 +1,5 @@
 # 50ra4-react-component2
 
-![CI](https://github.com/shigarashi1/50ra4-react-component2/workflows/CI/badge.svg?branch=main)
-![Release GitHub Page](https://github.com/shigarashi1/50ra4-react-component2/workflows/Release%20GitHub%20Page/badge.svg?branch=main)
-
 Storybook [Check github pages](https://shigarashi1.github.io/50ra4-react-component2/)
 
 ## refactor
@@ -12,9 +9,6 @@ Storybook [Check github pages](https://shigarashi1.github.io/50ra4-react-compone
 - [x] fix: color palette
 - [x] fix: theme props
 - [ ] fix: organize css definition
-- [ ] fix: export props type definition for storybook 
-- [x] fix: split component
-- [x] add: custom hooks for TextInput & TextareaInput (1h)
 
 ## components
 
@@ -44,7 +38,7 @@ Storybook [Check github pages](https://shigarashi1.github.io/50ra4-react-compone
 - [ ] Sidebar
 
 ### surfaces
-- [x] Accordion（https://material-ui.com/components/accordion/）6h
+- [ ] Accordion（https://material-ui.com/components/accordion/）
 
 ### feedback
 - [ ] LoadingSpinner

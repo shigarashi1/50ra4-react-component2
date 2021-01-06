@@ -6,7 +6,7 @@ exports[`Storyshots display/Chip Docs 1`] = `
   border-radius: 100px;
   cursor: default;
   background-color: #263228;
-  padding: 8px 12px;
+  padding: 8px 16px;
   color: #fafafa;
   font-size: 14px;
 }
@@ -47,7 +47,7 @@ exports[`Storyshots display/Chip With Delete Icon 1`] = `
   border-radius: 100px;
   cursor: default;
   background-color: #0d47a1;
-  padding: 8px 12px;
+  padding: 8px 16px;
   color: #fafafa;
   font-size: 14px;
 }
@@ -677,7 +677,7 @@ exports[`Storyshots inputs/IconButton Docs 1`] = `
   -ms-flex-align: center;
   align-items: center;
   background-color: inherit;
-  padding: 4px;
+  padding: 2px;
   border: none;
   cursor: pointer;
 }
@@ -731,7 +731,7 @@ exports[`Storyshots inputs/TextInput Docs 1`] = `
   -ms-flex-align: center;
   align-items: center;
   background-color: inherit;
-  padding: 4px;
+  padding: 2px;
   border: none;
   cursor: pointer;
 }
@@ -751,16 +751,15 @@ exports[`Storyshots inputs/TextInput Docs 1`] = `
   width: 100%;
   background-color: #ffffff;
   border-width: 1px;
-  border-color: #c7c7c7;
+  border-color: #2c3630;
   border-style: solid;
   border-radius: 3px;
-  padding: 4px;
+  padding: 2px;
 }
 
 .c1 {
   border: none;
   outline: none;
-  line-height: 20px;
   padding: 4px;
   width: 100%;
   display: inline-block;
@@ -812,234 +811,5 @@ exports[`Storyshots inputs/TextInput Docs 1`] = `
       />
     </svg>
   </button>
-</div>
-`;
-
-exports[`Storyshots surfaces/Accordion Disabled 1`] = `
-.c1 {
-  fill: #62727b;
-  width: 24px;
-  height: 24px;
-}
-
-.c3 {
-  -webkit-transition: -webkit-transform 0.3s linear;
-  -webkit-transition: transform 0.3s linear;
-  transition: transform 0.3s linear;
-  -webkit-transform: rotate(90deg);
-  -ms-transform: rotate(90deg);
-  transform: rotate(90deg);
-}
-
-.c5 {
-  -webkit-transition: height 0.3s,opacity 0.3s linear;
-  transition: height 0.3s,opacity 0.3s linear;
-  height: auto;
-  opacity: 1;
-  padding: 4px;
-}
-
-.c0 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  width: 100%;
-  opacity: 0.5;
-  padding: 4px;
-  box-shadow: 0 1px 2px rgba(0,0,0,0.2);
-}
-
-.c0 > .{
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  width: 100%;
-  padding: 4px;
-  cursor: default;
-}
-
-.c0 > .> .{
-  display: inline-block;
-  font-weight: 700;
-}
-
-.c0 > .> .c2 {
-  display: inline-block;
-}
-
-.c0 > .c4 {
-  display: inline-block;
-  width: 100%;
-}
-
-<div
-  className="c0"
->
-  <div
-    aria-controls="accordion-undefined-header"
-    aria-disabled={false}
-    aria-expanded={true}
-    className=""
-    onClick={[Function]}
-    role="button"
-  >
-    <label
-      className=""
-    >
-      Accordion Disabled Sample
-    </label>
-    <svg
-      aria-hidden={true}
-      className="c1 c2 c3"
-      color="default"
-      size="medium"
-      viewBox="0 0 24 24"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <path
-        d="M0 0h24v24H0V0z"
-        fill="none"
-      />
-      <path
-        d="M15.41 16.59L10.83 12l4.58-4.59L14 6l-6 6 6 6 1.41-1.41z"
-      />
-    </svg>
-  </div>
-  <div
-    aria-labelledby="accordion-undefined-header"
-    className="c4 c5"
-  >
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-    </p>
-  </div>
-</div>
-`;
-
-exports[`Storyshots surfaces/Accordion Docs 1`] = `
-.c1 {
-  fill: #62727b;
-  width: 24px;
-  height: 24px;
-}
-
-.c3 {
-  -webkit-transition: -webkit-transform 0.3s linear;
-  -webkit-transition: transform 0.3s linear;
-  transition: transform 0.3s linear;
-  -webkit-transform: rotate(270deg);
-  -ms-transform: rotate(270deg);
-  transform: rotate(270deg);
-}
-
-.c5 {
-  overflow: hidden;
-  height: 0;
-  opacity: 0;
-}
-
-.c0 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  width: 100%;
-  padding: 4px;
-  box-shadow: 0 1px 2px rgba(0,0,0,0.2);
-}
-
-.c0 > .{
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  width: 100%;
-  padding: 4px;
-  cursor: pointer;
-}
-
-.c0 > .:hover {
-  opacity: 0.5;
-}
-
-.c0 > .> .{
-  display: inline-block;
-  font-weight: 700;
-}
-
-.c0 > .> .c2 {
-  display: inline-block;
-}
-
-.c0 > .c4 {
-  display: inline-block;
-  width: 100%;
-}
-
-<div
-  className="c0"
->
-  <div
-    aria-controls="accordion-undefined-header"
-    aria-disabled={true}
-    aria-expanded={false}
-    className=""
-    onClick={[Function]}
-    role="button"
-  >
-    <label
-      className=""
-    >
-      Accordion Sample
-    </label>
-    <svg
-      aria-hidden={true}
-      className="c1 c2 c3"
-      color="default"
-      size="medium"
-      viewBox="0 0 24 24"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <path
-        d="M0 0h24v24H0V0z"
-        fill="none"
-      />
-      <path
-        d="M15.41 16.59L10.83 12l4.58-4.59L14 6l-6 6 6 6 1.41-1.41z"
-      />
-    </svg>
-  </div>
-  <div
-    aria-labelledby="accordion-undefined-header"
-    className="c4 c5"
-  >
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-    </p>
-  </div>
 </div>
 `;
