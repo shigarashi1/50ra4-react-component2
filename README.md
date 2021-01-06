@@ -41,7 +41,7 @@ Storybook [Check github pages](https://shigarashi1.github.io/50ra4-react-compone
 - [ ] Sidebar
 
 ### surfaces
-- [x] Accordion（https://material-ui.com/components/accordion/）
+- [ ] Accordion（https://material-ui.com/components/accordion/）
 
 ### feedback
 - [ ] LoadingSpinner
