@@ -1,8 +1,7 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { ComponentProps, useEffect, useRef, useState } from 'react';
 import styled from 'styled-components';
-
-import { InputWrapper } from '../InputWrapper/InputWrapper';
-import { ClearIconButton } from '../ClearIconButton/ClearIconButton';
+import { HighLightOffIcon } from '../../display';
+import { IconButton } from '../IconButton/IconButton';
 
 type InputType = 'text' | 'search' | 'tel' | 'url' | 'email' | 'password' | 'date' | 'time' | 'number';
 type Props = {
@@ -36,7 +35,7 @@ export const TextInput: React.FC<Props> = ({
   const inputRef = useRef<HTMLInputElement | null>(null);
   const [stack, setStack] = useState<React.ChangeEvent<HTMLInputElement> | undefined>(undefined);
   const [isComposition, setIsComposition] = useState(false);
-  const [isFocused, setIsFocused] = useState(false);
+  const [focused, setFocused] = useState(false);
 
   useEffect(() => {
     if (inputRef.current) {
@@ -60,14 +59,14 @@ export const TextInput: React.FC<Props> = ({
 
   const onFocusHandler = (event: React.FocusEvent<HTMLInputElement>) => {
     if (onFocus && !disabled) {
-      setIsFocused(true);
+      setFocused(true);
       onFocus(event);
     }
   };
 
   const onBlurHandler = (event: React.FocusEvent<HTMLInputElement>) => {
     if (onBlur && !disabled) {
-      setIsFocused(false);
+      setFocused(false);
       onBlur(event);
     }
   };
@@ -81,34 +80,60 @@ export const TextInput: React.FC<Props> = ({
   };
 
   return (
-    <InputWrapper className={className} isFocused={isFocused} hasError={hasError} disabled={disabled}>
+    <StyledRoot className={className} focused={focused} hasError={hasError} disabled={disabled}>
       <StyledInput
         type={type}
         ref={inputRef}
         id={id}
         name={name}
         disabled={disabled}
+        hasError={hasError}
         onChange={onChangeHandler}
         onBlur={onBlurHandler}
         onFocus={onFocusHandler}
         onCompositionStart={onCompositionStart}
         onCompositionEnd={onCompositionEnd}
       />
-      {!!value && <StyledClearIconButton disabled={disabled} onClick={onClear} />}
-    </InputWrapper>
+      {!!value && <StyledClearButton disabled={disabled} onClear={onClear} />}
+    </StyledRoot>
   );
 };
 
-const StyledInput = styled.input`
+type RequiredProps = Required<Props>;
+type StyledRootProps = Pick<RequiredProps, 'disabled' | 'hasError'> & {
+  focused: boolean;
+};
+const StyledRoot = styled.div<StyledRootProps>`
+  display: inline-flex;
+  align-self: center;
+  width: 100%;
+  background-color: #ffffff;
+  opacity: ${({ disabled }) => disabled && 0.5};
+  border-width: 1px;
+  border-color: ${({ theme }) => theme.input.borderColor};
+  border-style: solid;
+  border-radius: 3px;
+  ${({ theme, focused, hasError }) => theme.input.focusBoxShadow(focused, hasError)};
+  padding: 2px;
+`;
+type StyledInputProps = Pick<RequiredProps, 'disabled' | 'hasError'>;
+const StyledInput = styled.input<StyledInputProps>`
   border: none;
   outline: none;
-  line-height: 20px;
   padding: 4px;
   width: 100%;
   ${({ theme }) => theme.font.ellipsis()}
 `;
 
-const StyledClearIconButton = styled(ClearIconButton)`
+type ClearButtonProps = ComponentProps<typeof IconButton>;
+const ClearButton: React.FC<ClearButtonProps> = (props) => {
+  return (
+    <IconButton {...props}>
+      <HighLightOffIcon color="default" size="small" />
+    </IconButton>
+  );
+};
+const StyledClearButton = styled(ClearButton)`
   border: none;
   outline: none;
 `;
