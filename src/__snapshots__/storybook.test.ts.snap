@@ -711,7 +711,7 @@ exports[`Storyshots inputs/IconButton Docs 1`] = `
 `;
 
 exports[`Storyshots inputs/TextInput Docs 1`] = `
-.c4 {
+.c5 {
   fill: #62727b;
   width: 18px;
   height: 18px;
@@ -757,6 +757,11 @@ exports[`Storyshots inputs/TextInput Docs 1`] = `
   padding: 4px;
 }
 
+.c3 {
+  border: none;
+  outline: none;
+}
+
 .c1 {
   border: none;
   outline: none;
@@ -771,7 +776,7 @@ exports[`Storyshots inputs/TextInput Docs 1`] = `
   word-wrap: normal;
 }
 
-.c3 {
+.c4 {
   border: none;
   outline: none;
 }
@@ -791,13 +796,13 @@ exports[`Storyshots inputs/TextInput Docs 1`] = `
     type="text"
   />
   <button
-    className="c2 c3"
+    className="c2 c3 c4"
     disabled={false}
     onClick={[Function]}
   >
     <svg
       aria-hidden={true}
-      className="c4"
+      className="c5"
       color="default"
       size="small"
       viewBox="0 0 24 24"
