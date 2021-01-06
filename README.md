@@ -11,7 +11,7 @@ Storybook [Check github pages](https://shigarashi1.github.io/50ra4-react-compone
 - [ ] fix: organize css definition
 - [ ] fix: export props type definition for storybook 
 - [x] fix: split component
-- [ ] add: custom hooks for TextInput & TextareaInput
+- [x] add: custom hooks for TextInput & TextareaInput (1h)
 
 ## components
 
@@ -41,7 +41,7 @@ Storybook [Check github pages](https://shigarashi1.github.io/50ra4-react-compone
 - [ ] Sidebar
 
 ### surfaces
-- [x] Accordion（https://material-ui.com/components/accordion/）
+- [x] Accordion（https://material-ui.com/components/accordion/）6h
 
 ### feedback
 - [ ] LoadingSpinner
