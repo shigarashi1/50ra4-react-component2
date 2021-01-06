@@ -12,7 +12,7 @@ name: CI
 # 起動のタイミング
 on:
   pull_request:
-    branches: [ develop ]
+    branches: [ main ]
 
 jobs:
   ci:
